@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+  </button>
+  <span>SudisTel</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item>Menu Principal</a>
+      <a mat-list-item>Mi Hotel</a>
+      <a mat-list-item>Reservas de Hotel</a>
+      <a mat-list-item>Lista de Recursos</a>
+      <a mat-list-item>Lista de Personal</a>
+      <a mat-list-item>Tareas</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh"></div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
