@@ -1,5 +1,3 @@
-import { User } from './User';
-
 export class Hotel {
   id: number = 0;
   name: string = '';
@@ -8,5 +6,4 @@ export class Hotel {
   contact_number: number = 0;
   province: string = '';
   address: string = '';
-  user: User = new User();
 }
