@@ -10,11 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesListComponent implements OnInit {
   dataSource: MatTableDataSource<Resource> = new MatTableDataSource();
-  displayedColumns: string[]=['id','resoruce_name', 'resoruce_type', 'stock'];
+  displayedColumns: string[]=['id', 'hotel', 'name', 'type', 'stock'];
   constructor(private Rs: ResourceService) { }
 
   ngOnInit(): void {
-    this.Rs.listarRecursos().subscribe( d =>{
+    this.Rs.listarRecursos().subscribe( (d) =>{
       this.dataSource = new MatTableDataSource(d)
     })
   }
