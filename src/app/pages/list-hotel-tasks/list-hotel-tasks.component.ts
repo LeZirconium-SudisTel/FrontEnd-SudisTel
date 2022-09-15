@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import { Task } from 'src/app/models/Task';
+import { TasksService } from 'src/app/services/tasks.service';
+
+
 
 @Component({
   selector: 'app-list-hotel-tasks',
@@ -6,10 +11,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-hotel-tasks.component.css']
 })
 export class ListHotelTasksComponent implements OnInit {
+ 
+  dataSource: MatTableDataSource<Task> = new MatTableDataSource();
+  displayedColumns: string[] = ['id', 'employer', 'name','description','is_finished'];
+  constructor(private Ts:TasksService) {
 
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {
+    this.Ts.ListarTareas().subscribe((d) => {
+      this.dataSource = new MatTableDataSource(d);
+    });
+  }
 }
