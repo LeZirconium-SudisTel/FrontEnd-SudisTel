@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/'">Menu Principal</button>
+    <button mat-menu-item [routerLink]="'/my-hotel'">Mi Hotel</button>
+    <button mat-menu-item [routerLink]="'/reservations'">
+      Reservas a mi hotel
+    </button>
+    <button mat-menu-item [routerLink]="'/employeers'">Empleados</button>
+    <button mat-menu-item [routerLink]="'/resources'">Lista de Recursos</button>
+    <button mat-menu-item [routerLink]="'/hotel-tasks'">Lista de Tareas</button>
+    <button mat-menu-item [routerLink]="'/list-rooms'">Lista de Habitaciones</button>
+  </mat-menu>
+  <span>SudisTel</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>
