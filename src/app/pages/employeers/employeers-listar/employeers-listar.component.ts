@@ -22,7 +22,7 @@ export class EmployeersListarComponent implements OnInit {
   constructor(public Es: EmployeesService) {}
 
   ngOnInit(): void {
-    this.Es.mostrarEmpleado().subscribe((d) => {
+    this.Es.listarEmpleados().subscribe((d) => {
       this.dataSource = new MatTableDataSource(d);
     });
   }
