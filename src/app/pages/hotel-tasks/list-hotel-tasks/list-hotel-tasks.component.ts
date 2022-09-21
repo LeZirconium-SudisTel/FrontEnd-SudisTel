@@ -3,8 +3,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Task } from 'src/app/models/Task';
 import { TasksService } from 'src/app/services/tasks.service';
 
-
-
 @Component({
   selector: 'app-list-hotel-tasks',
   templateUrl: './list-hotel-tasks.component.html',

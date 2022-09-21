@@ -20,22 +20,37 @@ module.exports = function () {
         phone_number: "935342813",
       },
     ],
-    reservations:[
+    reservations: [
       {
-        id:1,
-        user:{
-          id: 1
-        },
-        hotel: {
-          id: 1
-        },
+        id: 1,
         room: {
-          id: 3
+          id: 3,
         },
-        reservation_date: "17/09/2022",
-        room_price: 150,
-        status: "Completed"
-      }
+        check_in: "17/09/2022 - 11:00 hrs",
+        check_out: "19/09/2022 - 12:00 hrs",
+        room_price: "S./ 150",
+        status: "Completed",
+      },
+      {
+        id: 2,
+        room: {
+          id: 1,
+        },
+        check_in: "20/09/2022 - 12:00 hrs",
+        check_out: "24/09/2022 - 13:00 hrs",
+        room_price: "S./ 350",
+        status: "In Progress",
+      },
+      {
+        id: 3,
+        room: {
+          id: 2,
+        },
+        check_in: "25/09/2022 - 10:00 hrs",
+        check_out: "26/09/2022 - 12:00 hrs",
+        room_price: "S./ 550",
+        status: "Completed",
+      },
     ],
     hotels: [
       {
@@ -51,38 +66,38 @@ module.exports = function () {
         },
       },
     ],
-    rooms:[
+    rooms: [
       {
         id: 1,
         number: 101,
         is_available: true,
         hotel: {
-          id: 1
-        }
+          id: 1,
+        },
       },
       {
         id: 2,
         number: 102,
         is_available: true,
         hotel: {
-          id: 1
-        }
+          id: 1,
+        },
       },
       {
         id: 3,
         number: 103,
         is_available: false,
         hotel: {
-          id: 1
-        }
+          id: 1,
+        },
       },
       {
         id: 4,
         number: 104,
         is_available: true,
         hotel: {
-          id: 1
-        }
+          id: 1,
+        },
       },
     ],
     resources: [
@@ -123,7 +138,7 @@ module.exports = function () {
         stock: 100,
       },
     ],
-    roles:[
+    roles: [
       {
         id: 1,
         name_role: "Administrador",
@@ -140,66 +155,82 @@ module.exports = function () {
     employees: [
       {
         id: 1,
-        hotel:{
-          id: 1
+        email: "juan@hotmail.com",
+        role: {
+          id: 2,
         },
         first_name: "Juan",
         last_name: "Quispe",
+        phone_number: 926225391,
         dni: 78226382,
-        email: "juan@hotmail.com",
         photo: "example_url",
-        role:{
-          id: 2
-        }
       },
       {
         id: 2,
-        hotel:{
-          id: 1
+        email: "maria@hotmail.com",
+        role: {
+          id: 1,
         },
-        first_name: "Luis",
-        last_name: "Villar",
-        dni: 38220188,
-        email: "luis@hotmail.com",
+        first_name: "Maria",
+        last_name: "De la Cruz",
+        phone_number: 926225151,
+        dni: 18224582,
         photo: "example_url",
-        role:{
-          id: 1
-        }
       },
       {
         id: 3,
-        hotel:{
-          id: 1
+        email: "samuel@hotmail.com",
+        role: {
+          id: 3,
         },
-        first_name: "Emilio",
-        last_name: "Mamani",
-        dni: 45224482,
-        email: "emilio@hotmail.com",
+        first_name: "Samuel",
+        last_name: "De Luque",
+        phone_number: 966240611,
+        dni: 74125302,
         photo: "example_url",
-        role:{
-          id: 3
-        }
       },
       {
         id: 4,
-        hotel:{
-          id: 1
+        email: "ruben@hotmail.com",
+        role: {
+          id: 1,
         },
-        first_name: "Rocio",
-        last_name: "Rivera",
-        dni: 13426552,
-        email: "rocio@hotmail.com",
+        first_name: "Ruben",
+        last_name: "Doblas",
+        phone_number: 926225777,
+        dni: 78120334,
         photo: "example_url",
-        role:{
-          id: 1
-        }
+      },
+      {
+        id: 5,
+        email: "daarick@hotmail.com",
+        role: {
+          id: 3,
+        },
+        first_name: "Daarick",
+        last_name: "Lujan",
+        phone_number: 916555292,
+        dni: 78256933,
+        photo: "example_url",
+      },
+      {
+        id: 6,
+        email: "jessica@hotmail.com",
+        role: {
+          id: 3,
+        },
+        first_name: "Jessica",
+        last_name: "Angeles",
+        phone_number: 926621391,
+        dni: 8422193422,
+        photo: "example_url",
       },
     ],
     hotel_tasks: [
       {
         id: 1,
-        employer:{
-          id: 1
+        employer: {
+          id: 1,
         },
         name: "Limpieza cuarto 200",
         description:
@@ -208,8 +239,8 @@ module.exports = function () {
       },
       {
         id: 2,
-        employer:{
-          id: 2
+        employer: {
+          id: 2,
         },
         name: "Verificar reservas",
         description: "Verificar todas las reservas que hicieron al hotel",
@@ -217,8 +248,8 @@ module.exports = function () {
       },
       {
         id: 3,
-        employer:{
-          id: 3
+        employer: {
+          id: 3,
         },
         name: "Preparar desayuno",
         description:
@@ -227,8 +258,8 @@ module.exports = function () {
       },
       {
         id: 4,
-        employer:{
-          id: 4
+        employer: {
+          id: 4,
         },
         name: "Verificar llegada de recursos",
         description:
