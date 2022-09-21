@@ -1,5 +1,5 @@
-import { ResourceService } from './../../services/resource.service';
-import { Resource } from './../../models/Resource';
+import { ResourceService } from '../../../services/resource.service';
+import { Resource } from '../../../models/Resource';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesListComponent implements OnInit {
   dataSource: MatTableDataSource<Resource> = new MatTableDataSource();
-  displayedColumns: string[]=['id', 'hotel', 'name', 'type', 'stock'];
+  displayedColumns: string[]=['id', 'name', 'type', 'stock'];
   constructor(private Rs: ResourceService) { }
 
   ngOnInit(): void {

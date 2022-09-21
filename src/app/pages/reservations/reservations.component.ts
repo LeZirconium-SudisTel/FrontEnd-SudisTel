@@ -11,9 +11,8 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class ReservationsComponent implements OnInit {
   dataSource: MatTableDataSource<Reservation> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'user', 'hotel', 'room', 'reservation_date', 'room_price', 'status'];
+  displayedColumns: string[] = ['id', 'room_id', 'check_in', 'check_out', 'room_price', 'status'];
   constructor(private Rs: ReservationsService) {}
-
 
   ngOnInit(): void {
     this.Rs.mostrarReservas().subscribe((d) => {

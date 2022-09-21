@@ -15,6 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -24,9 +25,12 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
-import { ResourcesListComponent } from './pages/resources-list/resources-list.component';
-import { ListHotelTasksComponent } from './pages/list-hotel-tasks/list-hotel-tasks.component';
+import { ResourcesListComponent } from './pages/resources/resources-list/resources-list.component';
+import { ListHotelTasksComponent } from './pages/hotel-tasks/list-hotel-tasks/list-hotel-tasks.component';
 import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
+import { EmployeersListarComponent } from './pages/employeers/employeers-listar/employeers-listar.component';
+import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
+import { ResourcesComponent } from './pages/resources/resources.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,9 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
     ResourcesListComponent,
     ListHotelTasksComponent,
     ListRoomsComponent,
+    EmployeersListarComponent,
+    HotelTasksComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,8 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
     MatTableModule,
     MatSlideToggleModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
