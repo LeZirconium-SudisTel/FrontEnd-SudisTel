@@ -1,3 +1,4 @@
+import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'employeers', component: EmployeersComponent},
   {path: 'resources', component: ResourcesComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent},
-  {path: 'list-rooms', component: ListRoomsComponent}
+  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'add-task', component: HotelTasksCrearComponent}
 ];
 
 @NgModule({
