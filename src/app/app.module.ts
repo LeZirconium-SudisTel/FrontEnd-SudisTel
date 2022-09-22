@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
@@ -33,6 +34,7 @@ import { EmployeersListarComponent } from './pages/employeers/employeers-listar/
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
+import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +50,10 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
-    ResourcesCrearComponent
+    ResourcesCrearComponent,
+    EmployeersCrearComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -66,8 +70,9 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule,
+    MatInputModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent],
 })
