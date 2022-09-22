@@ -12,7 +12,7 @@
   
     <ng-container matColumnDef="role">
       <th mat-header-cell *matHeaderCellDef>Rol</th>
-      <td mat-cell *matCellDef="let element">{{element.role.id}}</td>
+      <td mat-cell *matCellDef="let element">{{element.role}}</td>
     </ng-container>
   
     <ng-container matColumnDef="first_name">
@@ -44,4 +44,8 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
   
-  
+  <div style="margin-left: 50px; margin-top: 20px;" class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" [routerLink]="'/add-employer'">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>

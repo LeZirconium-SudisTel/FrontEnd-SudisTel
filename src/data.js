@@ -156,9 +156,7 @@ module.exports = function () {
       {
         id: 1,
         email: "juan@hotmail.com",
-        role: {
-          id: 2,
-        },
+        role: "Administrador",
         first_name: "Juan",
         last_name: "Quispe",
         phone_number: 926225391,
@@ -168,9 +166,7 @@ module.exports = function () {
       {
         id: 2,
         email: "maria@hotmail.com",
-        role: {
-          id: 1,
-        },
+        role: "Cocinero",
         first_name: "Maria",
         last_name: "De la Cruz",
         phone_number: 926225151,
@@ -180,9 +176,7 @@ module.exports = function () {
       {
         id: 3,
         email: "samuel@hotmail.com",
-        role: {
-          id: 3,
-        },
+        role: "Conserje",
         first_name: "Samuel",
         last_name: "De Luque",
         phone_number: 966240611,
@@ -192,9 +186,7 @@ module.exports = function () {
       {
         id: 4,
         email: "ruben@hotmail.com",
-        role: {
-          id: 1,
-        },
+        role: "Conserje",
         first_name: "Ruben",
         last_name: "Doblas",
         phone_number: 926225777,
@@ -204,9 +196,7 @@ module.exports = function () {
       {
         id: 5,
         email: "daarick@hotmail.com",
-        role: {
-          id: 3,
-        },
+        role: "Cocinero",
         first_name: "Daarick",
         last_name: "Lujan",
         phone_number: 916555292,
@@ -216,9 +206,7 @@ module.exports = function () {
       {
         id: 6,
         email: "jessica@hotmail.com",
-        role: {
-          id: 3,
-        },
+        role: "Cocinero",
         first_name: "Jessica",
         last_name: "Angeles",
         phone_number: 926621391,
