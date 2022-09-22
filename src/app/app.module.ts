@@ -16,7 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule} from '@angular/material/input'
+
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
 import { EmployeersListarComponent } from './pages/employeers/employeers-listar/employeers-listar.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
+import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
 
 @NgModule({
@@ -48,8 +50,10 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
+    ResourcesCrearComponent,
     EmployeersCrearComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -68,6 +72,7 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     MatFormFieldModule,
     MatInputModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent],
 })
