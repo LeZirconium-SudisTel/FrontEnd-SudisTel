@@ -18,7 +18,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 
-
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
@@ -33,8 +32,10 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
 import { EmployeersListarComponent } from './pages/employeers/employeers-listar/employeers-listar.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
+import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
+    HotelTasksCrearComponent,
     ResourcesCrearComponent,
     EmployeersCrearComponent
   ],
