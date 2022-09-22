@@ -1,0 +1,37 @@
+<div class="container">
+
+    <h1>Añadir Recurso</h1>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="id" [(ngModel)]="resource.id">
+    </mat-form-field>
+  
+    <br>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput required placeholder="name" [(ngModel)]="resource.resoruce_name">
+  
+    </mat-form-field>
+  
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Tipo</mat-label>
+      <input type="email" matInput required placeholder="type" [(ngModel)]="resource.resoruce_type">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Cantidad</mat-label>
+      <input matInput required placeholder="stock" [(ngModel)]="resource.stock">
+    </mat-form-field>
+  
+    <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+    <button mat-raised-button color="warn" [routerLink]="'/resources'">Cancelar</button>
+    <p>{{mensaje}}</p>
+  
+  </div>

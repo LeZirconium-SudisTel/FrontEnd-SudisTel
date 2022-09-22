@@ -7,7 +7,7 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
-import { ResourcesListComponent } from './pages/resources/resources-list/resources-list.component';
+import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 
 const routes: Routes = [
   {path: '', component: PrincipalComponent},
@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'reservations', component: ReservationsComponent},
   {path: 'employeers', component: EmployeersComponent},
   {path: 'resources', component: ResourcesComponent},
+  {path: 'add-resource', component: ResourcesCrearComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent},
   {path: 'list-rooms', component: ListRoomsComponent}
 ];
