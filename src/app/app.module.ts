@@ -17,6 +17,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -33,6 +34,8 @@ import { EmployeersListarComponent } from './pages/employeers/employeers-listar/
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
+import { EmployeersDialogoComponent } from './pages/employeers/employeers-listar/employeers-dialogo/employeers-dialogo.component';
+import { EmployeersBuscarComponent } from './pages/employeers/employeers-buscar/employeers-buscar.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
-    EmployeersCrearComponent
+    EmployeersCrearComponent,
+    EmployeersDialogoComponent,
+    EmployeersBuscarComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +71,11 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+

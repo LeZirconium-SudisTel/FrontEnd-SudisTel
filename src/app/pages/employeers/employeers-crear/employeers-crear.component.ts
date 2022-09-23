@@ -27,18 +27,27 @@ export class EmployeersCrearComponent implements OnInit {
     if (this.employer.first_name.length > 0 && this.employer.last_name.length > 0 && this.employer.email.length>0 && this.employer.photo.length>0) {
       if(this.edicion){
         this.eS.modificar(this.employer).subscribe(data=>{
-          
+          this.eS.listarEmpleados().subscribe(data=>{
+            this.eS.setLista(data);
+          })
+        })
+      }else{
+        this.eS.insertar(this.employer).subscribe(data => {
+          this.eS.listarEmpleados().subscribe(data => {
+            this.eS.setLista(data);
+          })
         })
       }
-      this.eS.insertar(this.employer).subscribe(data => {
-        this.eS.listarEmpleados().subscribe(data => {
-          this.eS.setLista(data);
-        })
-      })
       this.router.navigate(['employeers']);
     } else {
       this.mensaje = "Completa los datos requeridos";
     }
   }
-  init(){}
+  init(){
+    if (this.edicion) {
+      this.eS.listarId(this.id).subscribe(data => {
+        this.employer = data;
+      })
+    }
+  }
 }
