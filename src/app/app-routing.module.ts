@@ -1,4 +1,4 @@
-
+import { EmployeersBuscarComponent } from './pages/employeers/employeers-buscar/employeers-buscar.component';
 import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
@@ -16,7 +16,11 @@ const routes: Routes = [
   {path: '', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
   {path: 'reservations', component: ReservationsComponent},
-  {path: 'employeers', component: EmployeersComponent},
+  {path: 'employeers', component: EmployeersComponent, children:[
+    { path: 'nuevo', component: EmployeersCrearComponent },
+    { path: 'edicion/:id', component: EmployeersCrearComponent },
+    { path: 'buscar/:id', component: EmployeersBuscarComponent }
+  ]},
   {path: 'resources', component: ResourcesComponent},
   {path: 'add-resource', component: ResourcesCrearComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent},

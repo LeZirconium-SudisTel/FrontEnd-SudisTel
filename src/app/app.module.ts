@@ -16,7 +16,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog'
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -35,6 +36,8 @@ import { ResourcesComponent } from './pages/resources/resources.component';
 import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
+import { EmployeersDialogoComponent } from './pages/employeers/employeers-listar/employeers-dialogo/employeers-dialogo.component';
+import { EmployeersBuscarComponent } from './pages/employeers/employeers-buscar/employeers-buscar.component';
 
 
 @NgModule({
@@ -51,9 +54,11 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
+    EmployeersCrearComponent,
+    EmployeersDialogoComponent,
+    EmployeersBuscarComponent
     HotelTasksCrearComponent,
     ResourcesCrearComponent,
-    EmployeersCrearComponent
   ],
   
   imports: [
@@ -72,10 +77,12 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
