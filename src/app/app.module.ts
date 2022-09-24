@@ -17,6 +17,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
+import { MatDialogModule } from '@angular/material/dialog';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,8 +50,8 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
-    ResourcesCrearComponent
-  ],
+    ResourcesCrearComponent,
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -67,6 +69,7 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

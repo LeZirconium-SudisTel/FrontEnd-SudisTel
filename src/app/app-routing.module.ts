@@ -14,8 +14,10 @@ const routes: Routes = [
   {path: 'my-hotel', component: MyHotelComponent},
   {path: 'reservations', component: ReservationsComponent},
   {path: 'employeers', component: EmployeersComponent},
-  {path: 'resources', component: ResourcesComponent},
-  {path: 'add-resource', component: ResourcesCrearComponent},
+  {path: 'resources', component: ResourcesComponent, children:[
+    {path: 'add-resource', component: ResourcesCrearComponent},
+    {path: 'edicion/:id', component: ResourcesCrearComponent},
+  ]},
   {path: 'hotel-tasks', component: HotelTasksComponent},
   {path: 'list-rooms', component: ListRoomsComponent}
 ];
