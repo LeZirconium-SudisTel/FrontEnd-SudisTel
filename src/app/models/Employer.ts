@@ -1,5 +1,3 @@
-import { Role } from './Role';
-
 export class Employer {
   id: number = 0;
   email: string = '';
