@@ -1,3 +1,5 @@
+import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
+import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { UserTypeComponent } from './pages/user-type/user-type.component';
 import { EmployeersBuscarComponent } from './pages/employeers/employeers-buscar/employeers-buscar.component';
 import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
@@ -30,7 +32,10 @@ const routes: Routes = [
   {path: 'list-rooms', component: ListRoomsComponent},
   {path: 'add-task', component: HotelTasksCrearComponent},
   {path: 'add-employer', component:EmployeersCrearComponent},
-  {path: 'principal-turist', component: PrincipalTuristComponent}
+  {path: 'principal-turist', component: PrincipalTuristComponent},
+  {path: 'all-hotels', component: AllHotelsComponent, children:[
+    { path: 'buscar/:id', component: AllHotelsBuscarComponent }
+  ]}
 ];
 
 @NgModule({

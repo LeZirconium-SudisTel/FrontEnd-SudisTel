@@ -43,6 +43,9 @@ import { UserTypeComponent } from './pages/user-type/user-type.component';
 import { NavBarComponent } from './components/nav-bar-owner/nav-bar-owner.component';
 import { NavBarTuristComponent } from './components/nav-bar-turist/nav-bar-turist.component';
 import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
+import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
+import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/all-hotels-listar.component';
+import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,10 @@ import { PrincipalTuristComponent } from './pages/principal-turist/principal-tur
     UserTypeComponent,
     NavBarComponent,
     NavBarTuristComponent,
-    PrincipalTuristComponent
+    PrincipalTuristComponent,
+    AllHotelsComponent,
+    AllHotelsListarComponent,
+    AllHotelsBuscarComponent
   ],
 
   imports: [
