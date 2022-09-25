@@ -16,16 +16,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
@@ -35,15 +35,24 @@ import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
 import { EmployeersListarComponent } from './pages/employeers/employeers-listar/employeers-listar.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
+import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
+import { EmployeersDialogoComponent } from './pages/employeers/employeers-listar/employeers-dialogo/employeers-dialogo.component';
+import { EmployeersBuscarComponent } from './pages/employeers/employeers-buscar/employeers-buscar.component';
+import { UserTypeComponent } from './pages/user-type/user-type.component';
+import { NavBarComponent } from './components/nav-bar-owner/nav-bar-owner.component';
+import { NavBarTuristComponent } from './components/nav-bar-turist/nav-bar-turist.component';
+import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
+import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
+import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/all-hotels-listar.component';
+import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalComponent,
-    NavBarComponent,
     MyHotelComponent,
     ReservationsComponent,
     EmployeersComponent,
@@ -53,12 +62,20 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersListarComponent,
     HotelTasksComponent,
     ResourcesComponent,
+    EmployeersCrearComponent,
+    EmployeersDialogoComponent,
+    EmployeersBuscarComponent,
+    HotelTasksCrearComponent,
     ResourcesCrearComponent,
-    EmployeersCrearComponent
+    UserTypeComponent,
+    NavBarComponent,
+    NavBarTuristComponent,
+    PrincipalTuristComponent,
+    AllHotelsComponent,
+    AllHotelsListarComponent,
+    AllHotelsBuscarComponent
   ],
-
-
-
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -76,9 +93,11 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     MatCardModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule
+
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent],
 })

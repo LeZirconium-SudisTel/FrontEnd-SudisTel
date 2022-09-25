@@ -1,4 +1,88 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar-owner></app-nav-bar-owner>
 <div>
-    <h1 style="text-align: center; padding-top: 20px;">Bienvenidos a SuidsTel</h1>
+  <h1 style="text-align: center; padding-top: 20px">Bienvenidos a SuidsTel</h1>
+</div>
+
+<div
+  id="InsContainer"
+  style="padding-left: 10px; padding-right: 10px; text-align: center"
+>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>¿Como controlar a sus empleados?</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="https://www.docunecta.com/hubfs/claves-aumentar-productividad-empleados.jpg"
+      alt="foto-hotel"
+    />
+    <mat-card-content>
+      <p>
+        Es tan sencillo como ir a la parte superior izquierda, dar click a las
+        "Tres rayitas", y seleccionar "Lista de empleados", no solo podra tener
+        control de estos, sino que podra añadir, editar su informacion y
+        eliminar a uno de la lista. En adicion, podra buscar al empleado por su
+        nombre.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="'/employeers'">
+        IR A LA SECCION DE EMPLEADOS
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        ¿Desea administrar las tareas de los empleados y sus
+        recursos?</mat-card-title
+      >
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="https://retos-directivos.eae.es/wp-content/uploads/2019/01/iStock-924555992.jpg"
+      alt="foto-hotel"
+    />
+    <mat-card-content>
+      <p>
+        Es tan sencillo como ir a la parte superior izquierda, dar click a las
+        "Tres rayitas", y seleccionar "Lista de recursos" o "Lista de Tareas".
+        Aqui podra visualizar la disponibilidad de cada uno, asi como agregar y
+        editar en estas.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="'/hotel-tasks'">
+        IR A LA LISTA DE TAREAS
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="'/resources'">
+        IR A LAS LISTA DE RECURSOS
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>¿Y las habitaciones?</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="data:image/jpeg;base64,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"
+      alt="foto-hotel"
+    />
+    <mat-card-content>
+      <p>
+        Es igual de facil que dar click a las "Tres rayitas", y seleccionar
+        "Lista de Habitaciones", podra visualizar la lista de habitaciones
+        disponibles. Ademas, podra agregar mas habitaciones si llega a ampliar
+        su local.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="'/list-rooms'">
+        IR A LA LISTA DE HABITACIONES
+      </button>
+    </mat-card-actions>
+  </mat-card>
 </div>

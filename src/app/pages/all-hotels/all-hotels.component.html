@@ -1,0 +1,7 @@
+<app-nav-bar-turist></app-nav-bar-turist>
+<div class="navbar-separator" style="margin-bottom: 20px"></div>
+<h1 style="padding-left: 10px">Hoteles</h1>
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length!==0">
+    <app-all-hotels-listar></app-all-hotels-listar>
+</div>
