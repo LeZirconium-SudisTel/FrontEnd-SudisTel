@@ -1,6 +1,7 @@
+import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
 import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path: 'edicion/:id', component: ResourcesCrearComponent},
   ]},
   {path: 'hotel-tasks', component: HotelTasksComponent},
-  {path: 'list-rooms', component: ListRoomsComponent}
+  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'add-employer', component:EmployeersCrearComponent}
 ];
 
 @NgModule({

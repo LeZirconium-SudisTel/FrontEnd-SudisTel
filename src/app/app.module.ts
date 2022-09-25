@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 import { MatDialogModule } from '@angular/material/dialog';
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
@@ -34,6 +35,7 @@ import { EmployeersListarComponent } from './pages/employeers/employeers-listar/
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
+import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     HotelTasksComponent,
     ResourcesComponent,
     ResourcesCrearComponent,
- ],
+    EmployeersCrearComponent
+  ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -70,7 +74,9 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
+    MatInputModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent],
 })
