@@ -187,6 +187,7 @@ module.exports = function () {
         resoruce_name: "Toallas",
         resoruce_type: "Objetos de baño",
         stock: 200,
+        status: "Con stock",
       },
       {
         id: 2,
@@ -196,6 +197,7 @@ module.exports = function () {
         resoruce_name: "Escobas",
         resoruce_type: "Limpieza",
         stock: 50,
+        status: "Con stock",
       },
       {
         id: 3,
@@ -204,7 +206,8 @@ module.exports = function () {
         },
         resoruce_name: "Jabon Liquido",
         resoruce_type: "Objetos de baño",
-        stock: 50,
+        stock: 0,
+        status: "Sin stock",
       },
       {
         id: 4,
@@ -214,6 +217,7 @@ module.exports = function () {
         resoruce_name: "Sachets de Mantequilla",
         resoruce_type: "Desayuno",
         stock: 100,
+        status: "Con stock",
       },
     ],
     roles: [

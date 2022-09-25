@@ -21,13 +21,15 @@ const routes: Routes = [
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
   {path: 'reservations', component: ReservationsComponent},
+  {path: 'resources', component: ResourcesComponent, children:[
+    {path: 'add-resource', component: ResourcesCrearComponent},
+    {path: 'edicion/:id', component: ResourcesCrearComponent},
+  ]},
   {path: 'employeers', component: EmployeersComponent, children:[
     { path: 'nuevo', component: EmployeersCrearComponent },
     { path: 'edicion/:id', component: EmployeersCrearComponent },
     { path: 'buscar/:id', component: EmployeersBuscarComponent }
   ]},
-  {path: 'resources', component: ResourcesComponent},
-  {path: 'add-resource', component: ResourcesCrearComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent},
   {path: 'list-rooms', component: ListRoomsComponent},
   {path: 'add-task', component: HotelTasksCrearComponent},

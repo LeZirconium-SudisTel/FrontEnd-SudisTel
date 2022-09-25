@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Route, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Resource } from 'src/app/models/Resource';
 import { ResourceService } from 'src/app/services/resource.service';
 
@@ -15,7 +15,7 @@ export class ResourcesCrearComponent implements OnInit {
   edicion: boolean = false;
   id: number = 0;
 
-  constructor(private rS: ResourceService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private Rs: ResourceService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params)=>{
@@ -28,20 +28,29 @@ export class ResourcesCrearComponent implements OnInit {
   aceptar(): void {
     if (this.resource.resoruce_name.length > 0 && this.resource.resoruce_type.length > 0) {
       if(this.edicion){
-        this.rS.modificar(this.resource).subscribe(data=>{
-          
+        this.Rs.modificar(this.resource).subscribe(data=>{
+          this.Rs.listarRecursos().subscribe(data => {
+            this.Rs.setLista(data);
+          })
+        })
+      } else {
+        this.Rs.insertar(this.resource).subscribe(data => {
+          this.Rs.listarRecursos().subscribe(data => {
+            this.Rs.setLista(data);
+          })
         })
       }
-      this.rS.insertar(this.resource).subscribe(data => {
-        this.rS.listarRecursos().subscribe(data => {
-          this.rS.setLista(data);
-        })
-      })
       this.router.navigate(['resources']);
     } else {
       this.mensaje = "Completa los datos requeridos";
     }
   }
 
-  init(){}
+  init(){
+    if (this.edicion){
+    this.Rs.listarId(this.id).subscribe(data => {
+      this.resource = data;
+    })
+  }
+}
 }

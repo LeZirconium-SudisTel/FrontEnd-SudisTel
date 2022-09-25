@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
@@ -47,6 +48,7 @@ import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/all-hotels-listar.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +75,7 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
     AllHotelsListarComponent,
     AllHotelsBuscarComponent
   ],
-
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -90,9 +92,10 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule,
     MatDialogModule,
+    MatInputModule,
     MatGridListModule
+
   ],
 
   providers: [],

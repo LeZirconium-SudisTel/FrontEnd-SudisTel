@@ -19,12 +19,29 @@
     <td mat-cell *matCellDef="let element">{{ element.stock }}</td>
   </ng-container>
 
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Estado</th>
+    <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="accion1">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
+    [routerLink]="['edicion', element?.id]">Actualizar</button></td>
+  </ng-container>
+
+  <ng-container matColumnDef="accion2">
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Eliminar</button></td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
 
 <div style="margin-left: 50px; margin-top: 20px;" class="example-button-container">
-  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" [routerLink]="'/add-resource'">
+  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" routerLink="/resources/add-resource">
     <mat-icon>plus_one</mat-icon>
   </button>
 </div>

@@ -3,4 +3,5 @@ export class Resource {
   resoruce_name: string = '';
   resoruce_type: string = '';
   stock: number = 0;
+  status: string = "";
 }
