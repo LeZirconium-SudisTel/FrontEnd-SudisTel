@@ -20,6 +20,7 @@ import {MatInputModule} from '@angular/material/input'
 import { MatDialogModule } from '@angular/material/dialog';
 
 
+
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
@@ -56,6 +57,8 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     EmployeersCrearComponent
   ],
 
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -72,7 +75,6 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule,
     MatDialogModule,
     MatInputModule
   ],
