@@ -1,5 +1,3 @@
-import { Reservation } from './models/Reservation';
-import { Component } from '@angular/core';
 //Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,7 +24,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
@@ -50,7 +47,8 @@ import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/a
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
-//import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+
 
 @NgModule({
   declarations: [
@@ -79,7 +77,7 @@ import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.compo
     AllHotelsBuscarComponent,
     RoomsComponent,
     RoomsCrearComponent,
-    //ReservationsTuristsComponent
+    ReservationsTuristsComponent,
   ],
 
   imports: [
