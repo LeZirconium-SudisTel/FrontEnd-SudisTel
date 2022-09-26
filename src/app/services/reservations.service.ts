@@ -9,6 +9,4 @@ export class ReservationsService {
   constructor(private http: HttpClient ) {}
   mostrarReservas(){
     return this.http.get<Reservation[]>(this.url)
-
-
 }}

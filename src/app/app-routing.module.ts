@@ -1,3 +1,5 @@
+
+import { RoomsComponent } from './pages/rooms/rooms.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { UserTypeComponent } from './pages/user-type/user-type.component';
@@ -9,12 +11,14 @@ import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
-import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
+
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
+import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+
 
 const routes: Routes = [
   {path: '', component: UserTypeComponent},
@@ -29,10 +33,12 @@ const routes: Routes = [
   {path: 'resources', component: ResourcesComponent},
   {path: 'add-resource', component: ResourcesCrearComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent},
-  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'rooms', component: RoomsComponent},
+{path: 'reservations-turists', component: ReservationsTuristsComponent},
   {path: 'add-task', component: HotelTasksCrearComponent},
   {path: 'add-employer', component:EmployeersCrearComponent},
-  {path: 'principal-turist', component: PrincipalTuristComponent},
+  { path: 'principal-turist', component: PrincipalTuristComponent },
+  
   {path: 'all-hotels', component: AllHotelsComponent, children:[
     { path: 'buscar/:id', component: AllHotelsBuscarComponent }
   ]}
