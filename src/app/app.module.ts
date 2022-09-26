@@ -19,13 +19,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 
 //Componentes
 import { AppComponent } from './app.component';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { MyHotelComponent } from './pages/my-hotel/my-hotel.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { EmployeersComponent } from './pages/employeers/employeers.component';
@@ -47,7 +48,6 @@ import { PrincipalTuristComponent } from './pages/principal-turist/principal-tur
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/all-hotels-listar.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
-
 
 @NgModule({
   declarations: [
@@ -92,8 +92,10 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatDialogModule,
     MatInputModule,
+    MatOptionModule,
+    MatSelectModule
+    MatDialogModule,
     MatGridListModule
 
   ],

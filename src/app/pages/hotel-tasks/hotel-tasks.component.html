@@ -2,4 +2,7 @@
 <div class="navbar-separator" style="margin-bottom: 20px"></div>
 <h1 style="padding-left: 10px">Lista de tareas</h1>
 
-<app-list-hotel-tasks></app-list-hotel-tasks>
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length!==0">
+    <app-list-hotel-tasks></app-list-hotel-tasks>
+</div>

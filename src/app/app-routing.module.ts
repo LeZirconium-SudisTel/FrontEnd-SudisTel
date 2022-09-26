@@ -21,6 +21,13 @@ const routes: Routes = [
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
   {path: 'reservations', component: ReservationsComponent},
+  {path: 'hotel-tasks', component: HotelTasksComponent,children:[
+    {path: 'nuevo', component: HotelTasksCrearComponent},
+    { path: 'edicion/:id', component: HotelTasksCrearComponent },
+  ]},
+  {path: 'add-task', component: HotelTasksCrearComponent},
+  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'add-employer', component:EmployeersCrearComponent}
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
     {path: 'edicion/:id', component: ResourcesCrearComponent},
@@ -30,9 +37,7 @@ const routes: Routes = [
     { path: 'edicion/:id', component: EmployeersCrearComponent },
     { path: 'buscar/:id', component: EmployeersBuscarComponent }
   ]},
-  {path: 'hotel-tasks', component: HotelTasksComponent},
   {path: 'list-rooms', component: ListRoomsComponent},
-  {path: 'add-task', component: HotelTasksCrearComponent},
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'principal-turist', component: PrincipalTuristComponent},
   {path: 'all-hotels', component: AllHotelsComponent, children:[

@@ -5,5 +5,5 @@ export class Task {
   employer: Employer = new Employer();
   name: string = '';
   description: string = '';
-  is_finished: boolean = false;
+  status: string = '';
 }
