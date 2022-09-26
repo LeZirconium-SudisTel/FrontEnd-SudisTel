@@ -35,6 +35,8 @@ import { ResourcesComponent } from './pages/resources/resources.component';
 import { HotelTasksCrearComponent } from './pages/hotel-tasks/hotel-tasks-crear/hotel-tasks-crear.component';
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/employeers-crear.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -72,7 +74,9 @@ import { EmployeersCrearComponent } from './pages/employeers/employeers-crear/em
     FormsModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule
   ],
   
   providers: [],

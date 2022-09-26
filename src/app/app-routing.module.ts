@@ -19,9 +19,14 @@ const routes: Routes = [
   {path: 'employeers', component: EmployeersComponent},
   {path: 'resources', component: ResourcesComponent},
   {path: 'add-resource', component: ResourcesCrearComponent},
-  {path: 'hotel-tasks', component: HotelTasksComponent},
-  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'hotel-tasks', component: HotelTasksComponent,children:[
+    {path: 'nuevo', component: HotelTasksCrearComponent},
+    { path: 'edicion/:id', component: HotelTasksCrearComponent },
+    
+  ]},
   {path: 'add-task', component: HotelTasksCrearComponent},
+  {path: 'list-rooms', component: ListRoomsComponent},
+ 
   {path: 'add-employer', component:EmployeersCrearComponent}
 
 ];

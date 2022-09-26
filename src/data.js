@@ -223,7 +223,7 @@ module.exports = function () {
         name: "Limpieza cuarto 200",
         description:
           "Limpiar toda la habitacion y el baño, recoger la basura y cambiar la ropa de cama",
-        is_finished: false,
+          status: "En proceso"
       },
       {
         id: 2,
@@ -232,7 +232,7 @@ module.exports = function () {
         },
         name: "Verificar reservas",
         description: "Verificar todas las reservas que hicieron al hotel",
-        is_finished: true,
+        status: "En proceso"
       },
       {
         id: 3,
@@ -242,7 +242,7 @@ module.exports = function () {
         name: "Preparar desayuno",
         description:
           "Cocinar el desayuno de hoy: Pan con huevo revuelto y jugo de piña",
-        is_finished: false,
+          status: "En proceso"
       },
       {
         id: 4,
@@ -252,7 +252,7 @@ module.exports = function () {
         name: "Verificar llegada de recursos",
         description:
           "Esperar que los repartidores lleguen con los recursos de limpieza",
-        is_finished: true,
+          status: "En proceso"
       },
     ],
   };
