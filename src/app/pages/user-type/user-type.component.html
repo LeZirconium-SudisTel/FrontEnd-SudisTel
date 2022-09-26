@@ -1,0 +1,21 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+  <mat-card class="example-card" style="text-align: center">
+    <mat-card-header>
+      <mat-card-title>Seleccion de tipo de usuario</mat-card-title>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="https://d375ed4q973kxa.cloudfront.net/cdn/13/images/curso-online-en-recepcion-de-hotel-ingles-profesional-para-el-turismo_amp_primaria_1_1560502878.jpg"
+      alt="foto-hotel"
+    />
+    <mat-card-content>
+      <p>
+        Por favor, seleccione con que tipo de usuario desea ingresar para probar la aplicacion.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="'/principal-turist'">Turista</button>
+      <button mat-raised-button color="accent" [routerLink]="'/principal-owner'">Dueño de Hotel</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -60,10 +60,88 @@ module.exports = function () {
         average_price: 200,
         contact_number: 987345117,
         province: "Cuzco",
-        address: "Jr. Sacsayhuaman 123",
-        user: {
-          id: 2,
-        },
+        address: "Jr. Sacsayhuaman 123"
+      },
+      {
+        id: 2,
+        name: "Gran Hotel Guzman",
+        number_of_stars: "3 estrellas",
+        average_price: 500,
+        contact_number: 983654111,
+        province: "Lima",
+        address: "Calle Las Narajas 777"
+      },
+      {
+        id: 3,
+        name: "Winston Churchill Hotel",
+        number_of_stars: "5 estrellas",
+        average_price: 1000,
+        contact_number: 923147882,
+        province: "Trujillo",
+        address: "Av. Los Portales 456"
+      },
+      {
+        id: 4,
+        name: "Hotel Otelo",
+        number_of_stars: "4 estrellas",
+        average_price: 800,
+        contact_number: 981335447,
+        province: "Ayacucho",
+        address: "Jr. Huamanga 911"
+      },
+      {
+        id: 5,
+        name: "America Grand Hostel",
+        number_of_stars: "5 estrellas",
+        average_price: 1200,
+        contact_number: 917315227,
+        province: "Apurimac",
+        address: "Calle Luis Villar 231"
+      },
+      {
+        id: 6,
+        name: "Hotel Cielo 2",
+        number_of_stars: "3 estrellas",
+        average_price: 400,
+        contact_number: 984631113,
+        province: "Cuzco",
+        address: "Jr. Sacsayhuaman 234"
+      },
+      {
+        id: 7,
+        name: "Hotel El Encanto de Loreto",
+        number_of_stars: "3 estrellas",
+        average_price: 500,
+        contact_number: 917351117,
+        province: "Loreto",
+        address: "Av. El Polo 393"
+      },
+      {
+        id: 8,
+        name: "Hotel Espinoza",
+        number_of_stars: "No posee",
+        average_price: 80,
+        contact_number: 911016330,
+        province: "Arequipa",
+        address: "Jr. Lima 5623"
+      },
+      {
+        id: 9,
+        name: "Hotel Geminis",
+        number_of_stars: "3 estrellas",
+        average_price: 500,
+        contact_number: 927116117,
+        province: "Puno",
+        address: "Jr. Titicaca 392"
+      },
+      {
+        id: 10,
+        name: "Hotel UPC",
+        number_of_stars: "4 estrellas",
+        average_price: 800,
+        contact_number: 987343333,
+        province: "Lima",
+        address: "Av. Primavera 1123"
       },
     ],
     rooms: [
@@ -109,6 +187,7 @@ module.exports = function () {
         resoruce_name: "Toallas",
         resoruce_type: "Objetos de baño",
         stock: 200,
+        status: "Con stock",
       },
       {
         id: 2,
@@ -118,6 +197,7 @@ module.exports = function () {
         resoruce_name: "Escobas",
         resoruce_type: "Limpieza",
         stock: 50,
+        status: "Con stock",
       },
       {
         id: 3,
@@ -126,7 +206,8 @@ module.exports = function () {
         },
         resoruce_name: "Jabon Liquido",
         resoruce_type: "Objetos de baño",
-        stock: 50,
+        stock: 0,
+        status: "Sin stock",
       },
       {
         id: 4,
@@ -136,6 +217,7 @@ module.exports = function () {
         resoruce_name: "Sachets de Mantequilla",
         resoruce_type: "Desayuno",
         stock: 100,
+        status: "Con stock",
       },
     ],
     roles: [

@@ -8,7 +8,7 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="'/'">Menu Principal</button>
+    <button mat-menu-item [routerLink]="'/principal-owner'">Menu Principal</button>
     <button mat-menu-item [routerLink]="'/my-hotel'">Mi Hotel</button>
     <button mat-menu-item [routerLink]="'/reservations'">
       Reservas a mi hotel
@@ -24,6 +24,7 @@
     mat-icon-button
     class="example-icon favorite-icon"
     aria-label="Example icon-button with heart icon"
+    [routerLink]="'/'"
   >
     <mat-icon>account_circle</mat-icon>
   </button>
