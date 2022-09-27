@@ -19,33 +19,36 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 
 const routes: Routes = [
-  { path: '', component: UserTypeComponent },
-  { path: 'principal-owner', component: PrincipalComponent },
-  { path: 'my-hotel', component: MyHotelComponent },
-  { path: 'reservations', component: ReservationsComponent },
+
+  {path: '', component: UserTypeComponent},
+  {path: 'principal-owner', component: PrincipalComponent},
+  {path: 'my-hotel', component: MyHotelComponent},
+  {path: 'reservations', component: ReservationsComponent},
   {path: 'reservations-turists', component: ReservationsTuristsComponent},
-  {
-    path: 'employeers',
-    component: EmployeersComponent,
-    children: [
-      { path: 'nuevo', component: EmployeersCrearComponent },
-      { path: 'edicion/:id', component: EmployeersCrearComponent },
-      { path: 'buscar/:id', component: EmployeersBuscarComponent },
-    ],
-  },
-  { path: 'add-room', component: RoomsCrearComponent },
-  { path: 'resources', component: ResourcesComponent },
-  { path: 'add-resource', component: ResourcesCrearComponent },
-  { path: 'hotel-tasks', component: HotelTasksComponent },
+  {path: 'hotel-tasks', component: HotelTasksComponent,children:[
+    {path: 'nuevo', component: HotelTasksCrearComponent},
+    { path: 'edicion/:id', component: HotelTasksCrearComponent },
+  ]},
+  {path: 'add-task', component: HotelTasksCrearComponent},
   { path: 'rooms', component: RoomsComponent },
-  { path: 'add-task', component: HotelTasksCrearComponent },
-  { path: 'add-employer', component: EmployeersCrearComponent },
-  { path: 'principal-turist', component: PrincipalTuristComponent },
-  {
-    path: 'all-hotels',
-    component: AllHotelsComponent,
-    children: [{ path: 'buscar/:id', component: AllHotelsBuscarComponent }],
-  },
+  {path: 'add-employer', component:EmployeersCrearComponent}
+  {path: 'resources', component: ResourcesComponent, children:[
+    {path: 'add-resource', component: ResourcesCrearComponent},
+    {path: 'edicion/:id', component: ResourcesCrearComponent},
+  ]},
+  {path: 'employeers', component: EmployeersComponent, children:[
+    { path: 'nuevo', component: EmployeersCrearComponent },
+    { path: 'edicion/:id', component: EmployeersCrearComponent },
+    { path: 'buscar/:id', component: EmployeersBuscarComponent }
+  ]},
+  {path: 'list-rooms', component: ListRoomsComponent},
+  {path: 'add-employer', component:EmployeersCrearComponent},
+  {path: 'principal-turist', component: PrincipalTuristComponent},
+  {path: 'all-hotels', component: AllHotelsComponent, children:[
+    { path: 'buscar/:id', component: AllHotelsBuscarComponent }
+  ]},
+  { path: 'add-room', component: RoomsCrearComponent },
+
 ];
 
 @NgModule({

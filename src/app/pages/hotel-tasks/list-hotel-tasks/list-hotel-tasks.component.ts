@@ -11,7 +11,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 export class ListHotelTasksComponent implements OnInit {
  
   dataSource: MatTableDataSource<Task> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'employer', 'name','description','is_finished'];
+  displayedColumns: string[] = ['id', 'name','description','status','accion1'];
   constructor(private Ts:TasksService) {
 
   }
@@ -19,6 +19,9 @@ export class ListHotelTasksComponent implements OnInit {
   ngOnInit(): void {
     this.Ts.ListarTareas().subscribe((d) => {
       this.dataSource = new MatTableDataSource(d);
+    })
+    this.Ts.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
     });
   }
 }

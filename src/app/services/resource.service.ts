@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class ResourceService {
   url: string = "http://localhost:3000/resources";
   private listaCambio = new Subject<Resource[]>()
+  private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
 
   listarRecursos() {
@@ -33,5 +34,14 @@ export class ResourceService {
 
   listarId(id: number){
     return this.http.get<Resource>(`${this.url}/${id}`);
+  }
+  eliminar(id: number){
+    return this.http.delete(this.url + "/" + id);
+  }
+  getConfirmaEliminacion() {
+    return this.confirmaEliminacion.asObservable();
+  }
+  setConfirmaEliminacion(estado: Boolean) {
+    this.confirmaEliminacion.next(estado);
   }
 }

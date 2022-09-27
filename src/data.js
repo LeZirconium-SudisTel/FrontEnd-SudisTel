@@ -187,6 +187,7 @@ module.exports = function () {
         resoruce_name: "Toallas",
         resoruce_type: "Objetos de baño",
         stock: 200,
+        status: "Con stock",
       },
       {
         id: 2,
@@ -196,6 +197,7 @@ module.exports = function () {
         resoruce_name: "Escobas",
         resoruce_type: "Limpieza",
         stock: 50,
+        status: "Con stock",
       },
       {
         id: 3,
@@ -204,7 +206,8 @@ module.exports = function () {
         },
         resoruce_name: "Jabon Liquido",
         resoruce_type: "Objetos de baño",
-        stock: 50,
+        stock: 0,
+        status: "Sin stock",
       },
       {
         id: 4,
@@ -214,6 +217,7 @@ module.exports = function () {
         resoruce_name: "Sachets de Mantequilla",
         resoruce_type: "Desayuno",
         stock: 100,
+        status: "Con stock",
       },
     ],
     roles: [
@@ -301,7 +305,7 @@ module.exports = function () {
         name: "Limpieza cuarto 200",
         description:
           "Limpiar toda la habitacion y el baño, recoger la basura y cambiar la ropa de cama",
-        is_finished: false,
+          status: "En proceso"
       },
       {
         id: 2,
@@ -310,7 +314,7 @@ module.exports = function () {
         },
         name: "Verificar reservas",
         description: "Verificar todas las reservas que hicieron al hotel",
-        is_finished: true,
+        status: "En proceso"
       },
       {
         id: 3,
@@ -320,7 +324,7 @@ module.exports = function () {
         name: "Preparar desayuno",
         description:
           "Cocinar el desayuno de hoy: Pan con huevo revuelto y jugo de piña",
-        is_finished: false,
+          status: "En proceso"
       },
       {
         id: 4,
@@ -330,7 +334,7 @@ module.exports = function () {
         name: "Verificar llegada de recursos",
         description:
           "Esperar que los repartidores lleguen con los recursos de limpieza",
-        is_finished: true,
+          status: "En proceso"
       },
     ],
   };

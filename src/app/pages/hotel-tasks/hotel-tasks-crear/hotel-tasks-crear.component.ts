@@ -29,20 +29,29 @@ export class HotelTasksCrearComponent implements OnInit {
     if (this.task.name.length > 0 && this.task.description.length > 0) {
       if(this.edicion){
         this.tS.modificar(this.task).subscribe(data=>{
-          
+          this.tS.ListarTareas().subscribe(data => {
+            this.tS.setLista(data);
         })
-      }
+    
+      })
+    } else {
       this.tS.insertar(this.task).subscribe(data => {
         this.tS.ListarTareas().subscribe(data => {
           this.tS.setLista(data);
         })
       })
+    }
       this.router.navigate(['hotel-tasks']);
     } else {
       this.mensaje = "Completa los datos requeridos";
     }
   }
-
-  init(){}
+  
+  init(){
+    if (this.edicion) {
+      this.tS.listarId(this.id).subscribe(data => {
+        this.task = data;
+  })
+}}
 }
 

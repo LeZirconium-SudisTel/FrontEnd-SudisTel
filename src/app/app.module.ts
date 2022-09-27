@@ -19,6 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -79,7 +82,7 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     RoomsCrearComponent,
     ReservationsTuristsComponent,
   ],
-
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -97,8 +100,11 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatOptionModule,
+    MatSelectModule
     MatDialogModule,
     MatGridListModule
+
   ],
 
   providers: [],
