@@ -16,6 +16,7 @@ import { ReservationsComponent } from './pages/reservations/reservations.compone
 import { ResourcesCrearComponent } from './pages/resources/resources-crear/resources-crear.component';
 import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 
 const routes: Routes = [
   { path: '', component: UserTypeComponent },
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'buscar/:id', component: EmployeersBuscarComponent },
     ],
   },
+  { path: 'add-room', component: RoomsCrearComponent },
   { path: 'resources', component: ResourcesComponent },
   { path: 'add-resource', component: ResourcesCrearComponent },
   { path: 'hotel-tasks', component: HotelTasksComponent },

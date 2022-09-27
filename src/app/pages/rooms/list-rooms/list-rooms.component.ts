@@ -18,5 +18,8 @@ export class ListRoomsComponent implements OnInit {
     this.Rs.mostrarHabitaciones().subscribe((d) => {
       this.dataSource = new MatTableDataSource(d);
     });
+    this.Rs.getLista().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
   }
 }
