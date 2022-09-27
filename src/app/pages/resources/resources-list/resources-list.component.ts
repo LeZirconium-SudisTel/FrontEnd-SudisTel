@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class ResourcesListComponent implements OnInit {
   dataSource: MatTableDataSource<Resource> = new MatTableDataSource();
-  displayedColumns: string[]=['id', 'name', 'type', 'stock' , 'status' ,'accion1', 'accion2'];
+  displayedColumns: string[]=['id', 'name', 'type', 'stock' , 'status' ,'accion1'];
   private idMayor: number = 0;
   constructor(private Rs: ResourceService, private dialog: MatDialog) { }
 

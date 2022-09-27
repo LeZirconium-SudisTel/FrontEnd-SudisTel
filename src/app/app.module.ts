@@ -101,7 +101,7 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     MatFormFieldModule,
     MatInputModule,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
     MatDialogModule,
     MatGridListModule
 

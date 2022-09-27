@@ -31,7 +31,7 @@ const routes: Routes = [
   ]},
   {path: 'add-task', component: HotelTasksCrearComponent},
   { path: 'rooms', component: RoomsComponent },
-  {path: 'add-employer', component:EmployeersCrearComponent}
+  {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
     {path: 'edicion/:id', component: ResourcesCrearComponent},
@@ -41,7 +41,6 @@ const routes: Routes = [
     { path: 'edicion/:id', component: EmployeersCrearComponent },
     { path: 'buscar/:id', component: EmployeersBuscarComponent }
   ]},
-  {path: 'list-rooms', component: ListRoomsComponent},
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'principal-turist', component: PrincipalTuristComponent},
   {path: 'all-hotels', component: AllHotelsComponent, children:[
