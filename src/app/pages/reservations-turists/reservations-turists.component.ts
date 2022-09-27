@@ -1,15 +1,15 @@
-import { Reservation } from './../../models/Reservation';
-import { ReservationsService } from './../../services/reservations.service';
-
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Reservation } from 'src/app/models/Reservation';
+import { ReservationsService } from 'src/app/services/reservations.service';
 
 @Component({
-  selector: 'app-reservations',
-  templateUrl: './reservations.component.html',
-  styleUrls: ['./reservations.component.css'],
+  selector: 'app-reservations-turists',
+  templateUrl: './reservations-turists.component.html',
+  styleUrls: ['./reservations-turists.component.css']
 })
-export class ReservationsComponent implements OnInit {
+export class ReservationsTuristsComponent implements OnInit {
+
   dataSource: MatTableDataSource<Reservation> = new MatTableDataSource();
   displayedColumns: string[] = [
     'id',

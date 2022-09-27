@@ -32,7 +32,7 @@ import { ReservationsComponent } from './pages/reservations/reservations.compone
 import { EmployeersComponent } from './pages/employeers/employeers.component';
 import { ResourcesListComponent } from './pages/resources/resources-list/resources-list.component';
 import { ListHotelTasksComponent } from './pages/hotel-tasks/list-hotel-tasks/list-hotel-tasks.component';
-import { ListRoomsComponent } from './pages/list-rooms/list-rooms.component';
+import { ListRoomsComponent } from './pages/rooms/list-rooms/list-rooms.component';
 import { EmployeersListarComponent } from './pages/employeers/employeers-listar/employeers-listar.component';
 import { HotelTasksComponent } from './pages/hotel-tasks/hotel-tasks.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
@@ -48,6 +48,10 @@ import { PrincipalTuristComponent } from './pages/principal-turist/principal-tur
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { AllHotelsListarComponent } from './pages/all-hotels/all-hotels-listar/all-hotels-listar.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
+import { RoomsComponent } from './pages/rooms/rooms.component';
+import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
+import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+
 
 @NgModule({
   declarations: [
@@ -73,7 +77,10 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
     PrincipalTuristComponent,
     AllHotelsComponent,
     AllHotelsListarComponent,
-    AllHotelsBuscarComponent
+    AllHotelsBuscarComponent,
+    RoomsComponent,
+    RoomsCrearComponent,
+    ReservationsTuristsComponent,
   ],
   
   imports: [

@@ -1,0 +1,26 @@
+<div>
+<h1>Añadir Habitacion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="room.id">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Number</mat-label>
+    <input matInput required placeholder="number" [(ngModel)]="room.number">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Disponible</mat-label>
+    <input matInput required placeholder="is_available" [(ngModel)]="room.is_available">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" [routerLink]="'/rooms'">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>   

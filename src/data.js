@@ -147,32 +147,32 @@ module.exports = function () {
     rooms: [
       {
         id: 1,
-        number: 101,
-        is_available: true,
+        number: "101",
+        is_available: "ocupado",
         hotel: {
           id: 1,
         },
       },
       {
         id: 2,
-        number: 102,
-        is_available: true,
+        number: "102",
+        is_available: "disponible",
         hotel: {
           id: 1,
         },
       },
       {
         id: 3,
-        number: 103,
-        is_available: false,
+        number: "103",
+        is_available: "ocupado",
         hotel: {
           id: 1,
         },
       },
       {
         id: 4,
-        number: 104,
-        is_available: true,
+        number: "104",
+        is_available: "disponible",
         hotel: {
           id: 1,
         },
