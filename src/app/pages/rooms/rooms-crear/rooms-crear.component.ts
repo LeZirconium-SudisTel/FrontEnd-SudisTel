@@ -3,10 +3,6 @@ import { RoomsService } from './../../../services/rooms.service';
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 
-
-
-
-
 @Component({
   selector: 'app-rooms-crear',
   templateUrl: './rooms-crear.component.html',

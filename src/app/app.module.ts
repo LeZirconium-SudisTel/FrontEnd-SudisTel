@@ -51,6 +51,7 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
+import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     RoomsComponent,
     RoomsCrearComponent,
     ReservationsTuristsComponent,
+    MyHotelCrearComponent,
   ],
   
   imports: [

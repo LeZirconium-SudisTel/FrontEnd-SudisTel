@@ -1,0 +1,15 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 80%;
+  margin-left: 10px;
+}
+
+.formulario-hotel{
+    margin-left: 30px;
+    padding-top: 30px;
+}

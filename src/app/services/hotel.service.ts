@@ -15,6 +15,10 @@ export class HotelService {
     return this.http.get<Hotel[]>(this.url);
   }
 
+  insertarHotel(hotel:Hotel){
+    return this.http.post(this.url, hotel);
+  }
+
   setLista(listaNueva: Hotel[]) {
     return this.listaCambio.next(listaNueva);
   }

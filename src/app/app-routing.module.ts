@@ -1,3 +1,4 @@
+import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: '', component: UserTypeComponent},
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
+  {path: 'add-hotel', component: MyHotelCrearComponent},
   {path: 'reservations', component: ReservationsComponent},
   {path: 'reservations-turists', component: ReservationsTuristsComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent,children:[
