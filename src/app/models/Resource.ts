@@ -1,7 +1,7 @@
 export class Resource {
-  id: number = 0;
-  resoruce_name: string = '';
-  resoruce_type: string = '';
+  idResource: number = 0;
+  nameResource: string = '';
+  typeResource: string = '';
   stock: number = 0;
   status: string = "";
 }

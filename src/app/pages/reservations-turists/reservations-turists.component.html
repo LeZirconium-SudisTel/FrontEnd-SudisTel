@@ -10,8 +10,8 @@
     </ng-container>
   
     <ng-container matColumnDef="room_id">
-      <th mat-header-cell *matHeaderCellDef>Room_ID</th>
-      <td mat-cell *matCellDef="let element">{{element.room.id}}</td>
+      <th mat-header-cell *matHeaderCellDef>Habitacion</th>
+      <td mat-cell *matCellDef="let element">{{element.room.numberRoom}}</td>
     </ng-container>
   
     <ng-container matColumnDef="check_in">
@@ -33,8 +33,17 @@
       <th mat-header-cell *matHeaderCellDef>Estado</th>
       <td mat-cell *matCellDef="let element">{{element.status}}</td>
     </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn">Cancelar</button>
+      </td>
+    </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
+
+ 
   

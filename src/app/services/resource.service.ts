@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class ResourceService {
-  url: string = "http://localhost:3000/resources";
+  url: string = "http://localhost:8080/resources";
   private listaCambio = new Subject<Resource[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -29,7 +29,7 @@ export class ResourceService {
   }
 
   modificar(resource: Resource) {
-    return this.http.put(this.url + "/" + resource.id, resource);
+    return this.http.put(this.url + "/" + resource.idResource, resource);
   }
 
   listarId(id: number){
