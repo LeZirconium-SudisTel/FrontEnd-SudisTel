@@ -26,7 +26,7 @@ export class ResourcesCrearComponent implements OnInit {
   }
 
   aceptar(): void {
-    if (this.resource.resoruce_name.length > 0 && this.resource.resoruce_type.length > 0) {
+    if (this.resource.nameResource.length > 0 && this.resource.typeResource.length > 0) {
       if(this.edicion){
         this.Rs.modificar(this.resource).subscribe(data=>{
           this.Rs.listarRecursos().subscribe(data => {

@@ -19,9 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatOptionModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -51,7 +51,8 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
-
+import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
+import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
 
 @NgModule({
   declarations: [
@@ -81,8 +82,10 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     RoomsComponent,
     RoomsCrearComponent,
     ReservationsTuristsComponent,
+    MyHotelCrearComponent,
+    ReservationsTuristsAgregarComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -103,8 +106,9 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     MatOptionModule,
     MatSelectModule,
     MatDialogModule,
-    MatGridListModule
-
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 
   providers: [],

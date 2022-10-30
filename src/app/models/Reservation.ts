@@ -5,6 +5,6 @@ export class Reservation {
   room: Room = new Room();
   check_in: string = '';
   check_out: string = '';
-  room_price: string = '';
+  room_price: number = 0;
   status: string = '';
 }

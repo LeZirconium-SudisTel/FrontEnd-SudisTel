@@ -7,7 +7,7 @@ import { Room } from '../models/Room';
   providedIn: 'root'
 })
 export class RoomsService {
-  url: string="http://localhost:3000/rooms";
+  url: string="http://localhost:8080/rooms";
   private listaCambio= new Subject<Room[]>();
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,6 @@ export class RoomsService {
   }
   Insertar(room:Room){
     return this.http.post(this.url,room);
-
   }
   setLista(listaNueva:Room[]){
     this.listaCambio.next(listaNueva);

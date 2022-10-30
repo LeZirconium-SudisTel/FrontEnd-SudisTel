@@ -1,0 +1,93 @@
+<div class="formulario-hotel">
+  <h1>Añadir Habitacion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="id" [(ngModel)]="hotel.id" />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese el nombre de su hotel"
+      [(ngModel)]="hotel.name"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Numero de estrellas</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese la cantidad de estrellas"
+      [(ngModel)]="hotel.number_of_stars"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Precio promedio</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese un precio promedio"
+      [(ngModel)]="hotel.average_price"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Numero de contacto</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese un numero de contacto"
+      [(ngModel)]="hotel.contact_number"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Provincia</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese la provincia"
+      [(ngModel)]="hotel.province"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Direccion</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese la direccion del hotel"
+      [(ngModel)]="hotel.address"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <div>
+    <button mat-raised-button color="primary" (click)="aceptar()">
+      Aceptar
+    </button>
+    <button mat-raised-button color="warn" [routerLink]="'/my-hotel'">
+      Cancelar
+    </button>
+  </div>
+  <br />
+  <p>{{ mensaje }}</p>
+</div>

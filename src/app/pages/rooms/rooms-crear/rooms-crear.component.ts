@@ -3,10 +3,6 @@ import { RoomsService } from './../../../services/rooms.service';
 import { Component, OnInit } from '@angular/core';
 import {  Router } from '@angular/router';
 
-
-
-
-
 @Component({
   selector: 'app-rooms-crear',
   templateUrl: './rooms-crear.component.html',
@@ -22,7 +18,7 @@ export class RoomsCrearComponent implements OnInit {
   }
 
     aceptar(): void {
-      if (this.room.number.length > 0 && this.room.is_available.length > 0) {
+      if (this.room.numberRoom > 0 && this.room.availableRoom.length > 0) {
 
         this.Rs.Insertar(this.room).subscribe(data => {
           this.Rs.mostrarHabitaciones().subscribe(data => {
@@ -34,7 +30,8 @@ export class RoomsCrearComponent implements OnInit {
         this.mensaje = "Complete los valores requeridos";
       }
     }
-  
+
+   
  
 }
 

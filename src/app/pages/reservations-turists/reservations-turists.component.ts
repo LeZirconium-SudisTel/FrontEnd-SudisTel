@@ -18,11 +18,15 @@ export class ReservationsTuristsComponent implements OnInit {
     'check_out',
     'room_price',
     'status',
+    'actions'
   ];
   constructor(private Rs: ReservationsService) {}
 
   ngOnInit(): void {
     this.Rs.mostrarReservas().subscribe((d) => {
+      this.dataSource = new MatTableDataSource(d);
+    });
+    this.Rs.getLista().subscribe((d) => {
       this.dataSource = new MatTableDataSource(d);
     });
   }
