@@ -6,5 +6,5 @@ export class Reservation {
   check_in: string = '';
   check_out: string = '';
   room_price: number = 0;
-  status: string = '';
+  payment_method: string = '';
 }
