@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -53,6 +53,7 @@ import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.compo
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
 import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
+import { ReservationsTuristsDialogoComponent } from './pages/reservations-turists/reservations-turists-dialogo/reservations-turists-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { ReservationsTuristsAgregarComponent } from './pages/reservations-turist
     ReservationsTuristsComponent,
     MyHotelCrearComponent,
     ReservationsTuristsAgregarComponent,
+    ReservationsTuristsDialogoComponent,
   ],
 
   imports: [
