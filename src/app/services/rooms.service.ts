@@ -7,7 +7,7 @@ import { Room } from '../models/Room';
   providedIn: 'root'
 })
 export class RoomsService {
-  url: string="http://localhost:3000/rooms";
+  url: string="http://localhost:8080/rooms";
   private listaCambio= new Subject<Room[]>();
   constructor(private http: HttpClient) { }
 
@@ -24,7 +24,7 @@ export class RoomsService {
     return this.listaCambio.asObservable();
   }
   modificar(room: Room) {
-    return this.http.put(this.url + "/" + room.idRoom, room);
+    return this.http.put(this.url,room);
   }
   listarId(id: number){
     return this.http.get<Room>(`${this.url}/${id}`);

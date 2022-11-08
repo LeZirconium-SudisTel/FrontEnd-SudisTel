@@ -1,3 +1,4 @@
+<app-rooms-busqueda style="margin-left: 52px ;"></app-rooms-busqueda>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -20,7 +21,7 @@
       <button
         mat-raised-button
         color="primary"
-        [routerLink]="['edicion', element?.id]"
+        [routerLink]="['edicion', element?.idRoom]"
       >
         Actualizar
       </button>
