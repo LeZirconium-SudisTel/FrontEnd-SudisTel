@@ -7,7 +7,7 @@ import { Subject, EMPTY } from 'rxjs';
   providedIn: 'root'
 })
 export class EmployeesService {
-  url: string = "http://localhost:3000/employees";
+  url: string = "http://localhost:8080/employers";
   private listaCambio=new Subject<Employer[]>()
   private confirmaEliminacion = new Subject<Boolean>()
   constructor(private http: HttpClient) { }
@@ -25,7 +25,7 @@ export class EmployeesService {
     return this.listaCambio.asObservable();
   }
   modificar(employer: Employer) {
-    return this.http.put(this.url + "/" + employer.id, employer);
+    return this.http.put(this.url, employer);
   }
   listarId(id: number){
     return this.http.get<Employer>(`${this.url}/${id}`);
