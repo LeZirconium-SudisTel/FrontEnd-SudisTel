@@ -29,7 +29,7 @@ export class ResourceService {
   }
 
   modificar(resource: Resource) {
-    return this.http.put(this.url + "/" + resource.idResource, resource);
+    return this.http.put(this.url, resource);
   }
 
   listarId(id: number){

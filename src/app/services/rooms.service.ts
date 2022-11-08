@@ -7,26 +7,26 @@ import { Room } from '../models/Room';
   providedIn: 'root'
 })
 export class RoomsService {
-  url: string="http://localhost:8080/rooms";
-  private listaCambio= new Subject<Room[]>();
+  url: string = "http://localhost:8080/rooms";
+  private listaCambio = new Subject<Room[]>();
   constructor(private http: HttpClient) { }
 
-  mostrarHabitaciones(){
+  mostrarHabitaciones() {
     return this.http.get<Room[]>(this.url);
   }
-  Insertar(room:Room){
-    return this.http.post(this.url,room);
+  Insertar(room: Room) {
+    return this.http.post(this.url, room);
   }
-  setLista(listaNueva:Room[]){
+  setLista(listaNueva: Room[]) {
     this.listaCambio.next(listaNueva);
   }
   getLista() {
     return this.listaCambio.asObservable();
   }
   modificar(room: Room) {
-    return this.http.put(this.url,room);
+    return this.http.put(this.url, room);
   }
-  listarId(id: number){
+  listarId(id: number) {
     return this.http.get<Room>(`${this.url}/${id}`);
   }
   buscar(texto: string) {
