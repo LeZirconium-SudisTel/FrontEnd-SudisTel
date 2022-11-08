@@ -1,7 +1,7 @@
 import { Room } from './../../../models/Room';
 import { RoomsService } from './../../../services/rooms.service';
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rooms-crear',
@@ -9,7 +9,7 @@ import {  Router } from '@angular/router';
   styleUrls: ['./rooms-crear.component.css']
 })
 export class RoomsCrearComponent implements OnInit {
-  room:Room=new Room();
+  room: Room = new Room();
   mensaje: string = "";
   constructor(private Rs: RoomsService, private router: Router) { }
 
@@ -17,24 +17,24 @@ export class RoomsCrearComponent implements OnInit {
 
   }
 
-    aceptar(): void {
-      if (this.room.numberRoom > 0 && this.room.availableRoom.length > 0) {
+  aceptar(): void {
+    if (this.room.numberRoom > 0 && this.room.availableRoom.length > 0) {
 
-        this.Rs.Insertar(this.room).subscribe(data => {
-          this.Rs.mostrarHabitaciones().subscribe(data => {
-            this.Rs.setLista(data);
-          })
+      this.Rs.Insertar(this.room).subscribe(data => {
+        this.Rs.mostrarHabitaciones().subscribe(data => {
+          this.Rs.setLista(data);
         })
-        this.router.navigate(['rooms']);
-      } else {
-        this.mensaje = "Complete los valores requeridos";
-      }
+      })
+      this.router.navigate(['rooms']);
+    } else {
+      this.mensaje = "Complete los valores requeridos";
     }
+  }
 
-   
- 
+
+
 }
 
-  
-  
+
+
 
