@@ -1,7 +1,7 @@
 import { Task } from './../models/Task';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, EMPTY } from 'rxjs';
 
 
 
@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class TasksService {
-  url:string = "http://localhost:3000/hotel_tasks";
+  url:string = "http://localhost:8080/hotel_tasks";
   private listaCambio = new Subject<Task[]>()
 
   constructor(private http:HttpClient) { }
@@ -30,12 +30,18 @@ getLista() {
 }
 
 modificar(task: Task) {
-  return this.http.put(this.url + "/" + task.id, task);
+  return this.http.put(this.url , task);
 }
 
 listarId(id: number){
   return this.http.get<Task>(`${this.url}/${id}`);
 }
-
+buscar(texto: string) {
+  if (texto.length != 0) {
+    return this.http.post<Task[]>(`${this.url}/buscar`, texto.toLowerCase(), {
+    });
+  }
+  return EMPTY;
+}
 
 }
