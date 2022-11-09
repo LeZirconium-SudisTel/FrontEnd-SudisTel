@@ -20,6 +20,7 @@ export class ReservationsTuristsComponent implements OnInit {
     'check_out',
     'room_price',
     'status',
+    'credit_card',
     'actions'
   ];
   private idMayor: number = 0;
