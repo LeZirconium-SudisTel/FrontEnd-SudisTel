@@ -1,0 +1,42 @@
+<div class = "container">
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="id" [(ngModel)]="creditCard.idCreditCard">
+      </mat-form-field>
+    
+      <br>
+    
+      <mat-form-field class="example-full-width">
+        <mat-label>Numero</mat-label>
+        <input matInput required placeholder="name" [(ngModel)]="creditCard.numberCard">
+      </mat-form-field>
+    
+      <br>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>CCV</mat-label>
+        <input matInput required placeholder="name" [(ngModel)]="creditCard.ccv">
+      </mat-form-field>
+  
+      <br>
+
+      <mat-form-field appearance="fill">
+        <mat-label>ExpireDate</mat-label>
+        <input
+          matInput
+          required
+          [matDatepicker]="picker1"
+          [(ngModel)]="creditCard.expireDate"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    
+      <br>
+      
+      <br>
+      <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/credit-cards">Cancelar</button>
+      <p>{{mensaje}}</p>
+
+</div>

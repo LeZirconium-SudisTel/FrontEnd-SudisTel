@@ -1,3 +1,5 @@
+import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
+import { CreditCardComponent } from './pages/credit-card/credit-card.component';
 import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
 import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
@@ -51,7 +53,9 @@ const routes: Routes = [
     { path: 'buscar/:id', component: AllHotelsBuscarComponent }
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
-
+  {path: 'credit-cards', component: CreditCardComponent, children:[
+    { path: 'add-credit-cards', component: CreditCardCrearComponent }
+  ]},
 ];
 
 @NgModule({
