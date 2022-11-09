@@ -1,5 +1,5 @@
 export class Room {
-  id: number = 0;
-  number: string = "";
-  is_available: string = "";
+  idRoom: number = 0;
+  numberRoom: number = 0;
+  availableRoom: string = "";
 }

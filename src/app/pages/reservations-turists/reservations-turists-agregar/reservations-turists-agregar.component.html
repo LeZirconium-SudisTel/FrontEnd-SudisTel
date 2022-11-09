@@ -1,0 +1,94 @@
+<div class="container">
+  <h1>Reservar Habitacion</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Id de la reserva"
+      [(ngModel)]="reservation.id"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione una Habitacion</mat-label>
+    <mat-select [(value)]="idHabitacionSeleccionada" required>
+      <mat-option *ngFor="let r of listaHabitaciones" [value]="r.idRoom">
+        {{ r.numberRoom }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field appearance="fill">
+    <mat-label>Check-In</mat-label>
+    <input
+      matInput
+      required
+      [matDatepicker]="picker2"
+      [(ngModel)]="reservation.check_in"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field appearance="fill">
+    <mat-label>Check-Out</mat-label>
+    <input
+      matInput
+      required
+      [matDatepicker]="picker1"
+      [(ngModel)]="reservation.check_out"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Costo de la habitacion</mat-label>
+    <input
+      matInput
+      required
+      placeholder="Ingrese el costo de la habitacion"
+      [(ngModel)]="reservation.room_price"
+    />
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Forma de Pago</mat-label>
+    <mat-select [(ngModel)]="reservation.payment_method"> 
+      <mat-option value="Tarjeta">Tarjeta</mat-option>
+      <mat-option value="Efectivo">Efectivo</mat-option>
+     </mat-select>
+  </mat-form-field>
+
+  <br />
+
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione uan Tarjeta de Credito</mat-label>
+    <mat-select [(value)]="idTarjetaSeleccionada" required>
+      <mat-option *ngFor="let c of listaTarjetas" [value]="c.idCreditCard">
+        {{ c.idCreditCard }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+
+  <button mat-raised-button color="primary" (click)="crear()">Aceptar</button>
+  <button mat-raised-button color="accent" routerLink="/all-hotels">
+    Cancelar
+  </button>
+  <p>{{ mensaje }}</p>
+</div>

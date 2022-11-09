@@ -1,31 +1,35 @@
 <div class="container">
 
-  <h1>Añadir Recurso</h1>
+  <h1>Añadir Empleado</h1>
 
   <mat-form-field class="example-full-width">
     <mat-label>Id</mat-label>
-    <input matInput placeholder="id" [(ngModel)]="employer.id">
+    <input matInput placeholder="id" [(ngModel)]="employer.idEmployer">
   </mat-form-field>
 
   <br>
   
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
-    <input type="email" matInput required placeholder="email"[(ngModel)]="employer.email">
+    <input type="email" matInput required placeholder="email"[(ngModel)]="employer.emailEmployer">
   </mat-form-field>
 
   <br>
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Role</mat-label>
-    <input matInput placeholder="role"[(ngModel)]="employer.role">
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un Rol</mat-label>
+    <mat-select [(value)]="idRoleSeleccionado" required>
+      <mat-option *ngFor="let ro of listaRoles" [value]="ro.idRole">
+        {{ ro.name_Role }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
     
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput required placeholder="name" [(ngModel)]="employer.first_name">
+    <input matInput required placeholder="name" [(ngModel)]="employer.first_nameEmployer">
 
   </mat-form-field>
 
@@ -33,28 +37,28 @@
 
   <mat-form-field class="example-full-width">
     <mat-label>Apellido</mat-label>
-    <input matInput required placeholder="last_name"[(ngModel)]="employer.last_name">
+    <input matInput required placeholder="last_name"[(ngModel)]="employer.last_nameEmployer">
   </mat-form-field>
 
   <br>
   
   <mat-form-field class="example-full-width">
     <mat-label>Numero de telf.</mat-label>
-    <input type="number" matInput required placeholder="phone_number" [(ngModel)]="employer.phone_number">
+    <input type="number" matInput required placeholder="phone_number" [(ngModel)]="employer.phone_numberEmployer">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>DNI</mat-label>
-    <input type="number" matInput required placeholder="DNI" [(ngModel)]="employer.dni">
+    <input type="number" matInput required placeholder="DNI" [(ngModel)]="employer.dniEmployer">
   </mat-form-field>
 
   <br>
 
       <mat-form-field class="example-full-width">
       <mat-label>Photo</mat-label>
-      <input matInput required placeholder="photo" [(ngModel)]="employer.photo">
+      <input matInput required placeholder="photo" [(ngModel)]="employer.photoEmployer">
    </mat-form-field>
 
   <br>

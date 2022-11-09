@@ -7,12 +7,16 @@ import { Hotel } from '../models/Hotel';
   providedIn: 'root',
 })
 export class HotelService {
-  url: string = 'http://localhost:3000/hotels';
+  url: string = 'http://localhost:8080/hotels';
   private listaCambio = new Subject<Hotel[]>();
   constructor(private http: HttpClient) {}
 
   mostrarHotel() {
     return this.http.get<Hotel[]>(this.url);
+  }
+
+  insertarHotel(hotel:Hotel){
+    return this.http.post(this.url, hotel);
   }
 
   setLista(listaNueva: Hotel[]) {

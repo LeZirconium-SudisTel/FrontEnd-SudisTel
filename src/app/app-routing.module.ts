@@ -1,3 +1,8 @@
+import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
+import { CreditCardComponent } from './pages/credit-card/credit-card.component';
+import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
+import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/all-hotels-buscar.component';
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
@@ -23,14 +28,21 @@ const routes: Routes = [
   {path: '', component: UserTypeComponent},
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
+  {path: 'add-hotel', component: MyHotelCrearComponent},
   {path: 'reservations', component: ReservationsComponent},
   {path: 'reservations-turists', component: ReservationsTuristsComponent},
+  {path: 'reservar', component:ReservationsTuristsAgregarComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent,children:[
     {path: 'nuevo', component: HotelTasksCrearComponent},
     { path: 'edicion/:id', component: HotelTasksCrearComponent },
   ]},
   {path: 'add-task', component: HotelTasksCrearComponent},
-  { path: 'rooms', component: RoomsComponent },
+  { path: 'rooms', component: RoomsComponent, children:[
+    { path: 'nuevo', component: RoomsCrearComponent },
+    { path: 'edicion/:id', component: RoomsCrearComponent },
+    { path: 'buscar/:id', component: RoomsBusquedaComponent }
+  ]},
+  { path: 'add-room', component: RoomsCrearComponent },
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
@@ -47,6 +59,9 @@ const routes: Routes = [
     { path: 'buscar/:id', component: AllHotelsBuscarComponent }
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
+  {path: 'credit-cards', component: CreditCardComponent, children:[
+    { path: 'add-credit-cards', component: CreditCardCrearComponent }
+  ]},
 
 ];
 

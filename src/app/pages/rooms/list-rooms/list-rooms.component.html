@@ -1,28 +1,44 @@
-
-
+<app-rooms-busqueda style="margin-left: 52px ;"></app-rooms-busqueda>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>ID</th>
-    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.idRoom }}</td>
   </ng-container>
 
   <ng-container matColumnDef="room_number">
     <th mat-header-cell *matHeaderCellDef>Numero de Habitacion</th>
-    <td mat-cell *matCellDef="let element">{{ element.number }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.numberRoom }}</td>
   </ng-container>
 
   <ng-container matColumnDef="is_available">
     <th mat-header-cell *matHeaderCellDef>Esta ocupado?</th>
-    <td mat-cell *matCellDef="let element">{{ element.is_available }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.availableRoom }}</td>
   </ng-container>
+
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef>Acciones</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-raised-button
+        color="primary"
+        [routerLink]="['edicion', element?.idRoom]"
+      >
+        Actualizar
+      </button>
+    </td>
+  </ng-container>
+
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
 
 <div class="example-button-container">
-
-  <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon"
-    [routerLink]="'/add-room'">
+  <button
+    mat-mini-fab
+    color="primary"
+    aria-label="Example icon button with a plus one icon"
+    [routerLink]="'/add-room'"
+  >
     <mat-icon>plus_one</mat-icon>
   </button>
 </div>

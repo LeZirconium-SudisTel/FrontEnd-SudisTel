@@ -16,7 +16,7 @@ export class EmployeersBuscarComponent implements OnInit {
     let array: Employer[] = [];
     this.EmployeesService.listarEmpleados().subscribe(data => {
       data.forEach((element, index) => {
-        if (element.first_name.includes(e.target.value)) {
+        if (element.first_nameEmployer.includes(e.target.value)) {
           array.push(data[index]);
         }
       });

@@ -15,13 +15,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatOptionModule } from '@angular/material/core';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -51,7 +51,16 @@ import { AllHotelsBuscarComponent } from './pages/all-hotels/all-hotels-buscar/a
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
-
+import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
+import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
+import { ReservationsTuristsDialogoComponent } from './pages/reservations-turists/reservations-turists-dialogo/reservations-turists-dialogo.component';
+import { CreditCardComponent } from './pages/credit-card/credit-card.component';
+import { CreditCardListComponent } from './pages/credit-card/credit-card-list/credit-card-list.component';
+import { ResourcesBuscarComponent } from './pages/resources/resources-buscar/resources-buscar.component';
+import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
+import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
+import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
+import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
 
 @NgModule({
   declarations: [
@@ -81,8 +90,18 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     RoomsComponent,
     RoomsCrearComponent,
     ReservationsTuristsComponent,
+    MyHotelCrearComponent,
+    ReservationsTuristsAgregarComponent,
+    ReservationsTuristsDialogoComponent,
+    CreditCardComponent,
+    CreditCardListComponent,
+    ResourcesBuscarComponent,
+    CreditCardCrearComponent,
+    CreditCardDialogoComponent,
+    HotelTasksBuscarComponent,
+    RoomsBusquedaComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -103,8 +122,9 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
     MatOptionModule,
     MatSelectModule,
     MatDialogModule,
-    MatGridListModule
-
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
 
   providers: [],

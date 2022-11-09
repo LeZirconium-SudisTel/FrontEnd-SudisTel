@@ -11,7 +11,7 @@ import { RoomsService } from 'src/app/services/rooms.service';
 export class ListRoomsComponent implements OnInit {
   //is_available = false;
   dataSource: MatTableDataSource<Room> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'room_number', 'is_available'];
+  displayedColumns: string[] = ['id', 'room_number', 'is_available', 'acciones'];
   constructor(private Rs: RoomsService) {}
 
   ngOnInit(): void {

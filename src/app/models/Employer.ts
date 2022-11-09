@@ -1,10 +1,11 @@
+import {Role} from './Role'
 export class Employer {
-  id: number = 0;
-  email: string = '';
-  role: string = '';
-  first_name: string = '';
-  last_name: string = '';
-  phone_number: string = '';
-  dni: number = 0;
-  photo: string = '';
+  idEmployer: number = 0;
+  emailEmployer: string = '';
+  role: Role = new Role();
+  first_nameEmployer: string = '';
+  last_nameEmployer: string = '';
+  phone_numberEmployer: string = '';
+  dniEmployer: number = 0;
+  photoEmployer: string = '';
 }

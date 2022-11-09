@@ -1,0 +1,7 @@
+<app-nav-bar-turist style="margin-bottom: 20px"></app-nav-bar-turist>
+<div class="navbar-separator" style="margin-bottom: 20px"></div>
+<h1 style="padding-left: 10px">Tarjetas de Credito</h1>
+<router-outlet></router-outlet>
+<div [hidden]="route.children.length!==0">
+    <app-credit-card-list></app-credit-card-list>
+</div>
