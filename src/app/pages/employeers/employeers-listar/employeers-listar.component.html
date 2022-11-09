@@ -2,42 +2,42 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>id</th>
-    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.idEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="email">
     <th mat-header-cell *matHeaderCellDef>Email</th>
-    <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.emailEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="role">
     <th mat-header-cell *matHeaderCellDef>Rol</th>
-    <td mat-cell *matCellDef="let element">{{ element.role }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.role.name_Role }}</td>
   </ng-container>
 
   <ng-container matColumnDef="first_name">
     <th mat-header-cell *matHeaderCellDef>Nombre</th>
-    <td mat-cell *matCellDef="let element">{{ element.first_name }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.first_nameEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="last_name">
     <th mat-header-cell *matHeaderCellDef>Apellido</th>
-    <td mat-cell *matCellDef="let element">{{ element.last_name }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.last_nameEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="phone_number">
     <th mat-header-cell *matHeaderCellDef>Num. de Telefono</th>
-    <td mat-cell *matCellDef="let element">{{ element.phone_number }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.phone_numberEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="dni">
     <th mat-header-cell *matHeaderCellDef>DNI</th>
-    <td mat-cell *matCellDef="let element">{{ element.dni }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.dniEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="photo">
     <th mat-header-cell *matHeaderCellDef>Foto</th>
-    <td mat-cell *matCellDef="let element">{{ element.photo }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.photoEmployer }}</td>
   </ng-container>
 
   <ng-container matColumnDef="accion1">
@@ -46,7 +46,7 @@
       <button
         mat-raised-button
         color="primary"
-        [routerLink]="['edicion', element?.id]"
+        [routerLink]="['edicion', element?.idEmployer]"
       >
         Actualizar
       </button>
@@ -55,7 +55,7 @@
   <ng-container matColumnDef="accion2">
     <th mat-header-cell *matHeaderCellDef>Acciones</th>
     <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="warn" (click)="confirmar(element.id)">
+      <button mat-raised-button color="warn" (click)="confirmar(element.idEmployer)">
         Eliminar
       </button>
     </td>

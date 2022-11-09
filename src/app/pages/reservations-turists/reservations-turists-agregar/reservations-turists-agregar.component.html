@@ -32,7 +32,6 @@
       [matDatepicker]="picker2"
       [(ngModel)]="reservation.check_in"
     />
-    <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
     <mat-datepicker #picker2></mat-datepicker>
   </mat-form-field>
@@ -47,7 +46,6 @@
       [matDatepicker]="picker1"
       [(ngModel)]="reservation.check_out"
     />
-    <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
     <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field>
@@ -66,14 +64,12 @@
 
   <br />
 
-  <mat-form-field class="example-full-width">
-    <mat-label>Estado de la reserva</mat-label>
-    <input
-      matInput
-      required
-      placeholder="Ingrese el estado de la reserva"
-      [(ngModel)]="reservation.status"
-    />
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Forma de Pago</mat-label>
+    <mat-select [(ngModel)]="reservation.payment_method"> 
+      <mat-option value="Tarjeta">Tarjeta</mat-option>
+      <mat-option value="Efectivo">Efectivo</mat-option>
+     </mat-select>
   </mat-form-field>
 
   <br />
