@@ -15,9 +15,13 @@
   
     <br>
 
-    <mat-form-field class="example-full-width">
-      <mat-label>Tipo</mat-label>
-      <input type="email" matInput required placeholder="type" [(ngModel)]="resource.typeResource">
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo de recurso</mat-label>
+      <mat-select [(value)]="idTypeSeleccionado" required>
+        <mat-option *ngFor="let ty of listaTypes" [value]="ty.idType">
+          {{ ty.nameType }}
+        </mat-option>
+      </mat-select>
     </mat-form-field>
 
     <br>

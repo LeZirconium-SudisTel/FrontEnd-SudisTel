@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>id</th>
+      <td mat-cell *matCellDef="let element">{{ element.idCreditCard }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef>Numero</th>
+      <td mat-cell *matCellDef="let element">{{ element.numberCard }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="ccv">
+      <th mat-header-cell *matHeaderCellDef>CCV</th>
+      <td mat-cell *matCellDef="let element">{{ element.ccv }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="expiredate">
+      <th mat-header-cell *matHeaderCellDef>Fecha de Expiracion</th>
+      <td mat-cell *matCellDef="let element">{{ element.expireDate }}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="accion1">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" (click)="confirmar(element.idCreditCard)">
+          Eliminar
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  
+  <div style="margin-left: 50px; margin-top: 20px;" class="example-button-container">
+    <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" routerLink="/credit-cards/add-credit-cards">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+  </div>

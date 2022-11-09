@@ -54,10 +54,13 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
 import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
 import { ReservationsTuristsDialogoComponent } from './pages/reservations-turists/reservations-turists-dialogo/reservations-turists-dialogo.component';
+import { CreditCardComponent } from './pages/credit-card/credit-card.component';
+import { CreditCardListComponent } from './pages/credit-card/credit-card-list/credit-card-list.component';
+import { ResourcesBuscarComponent } from './pages/resources/resources-buscar/resources-buscar.component';
+import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
+import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
 import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
-
-
 
 @NgModule({
   declarations: [
@@ -90,6 +93,11 @@ import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqu
     MyHotelCrearComponent,
     ReservationsTuristsAgregarComponent,
     ReservationsTuristsDialogoComponent,
+    CreditCardComponent,
+    CreditCardListComponent,
+    ResourcesBuscarComponent,
+    CreditCardCrearComponent,
+    CreditCardDialogoComponent,
     HotelTasksBuscarComponent,
     RoomsBusquedaComponent,
   ],
