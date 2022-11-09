@@ -17,6 +17,17 @@
 
   <br>
 
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un Empleado</mat-label>
+    <mat-select [(value)]="idEmployerSeleccionado" required>
+      <mat-option *ngFor="let e of listaEmployers" [value]="e.idEmployer">
+        {{ e.first_nameEmployer }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+<br>
+
   <mat-form-field class="example-full-width">
     <mat-label>Descripcion</mat-label>
     <input matInput required placeholder="description" [(ngModel)]="task.description">
