@@ -1,3 +1,4 @@
+import { CreditCard } from './CreditCard';
 import { Room } from './Room';
 
 export class Reservation {
@@ -7,4 +8,5 @@ export class Reservation {
   check_out: string = '';
   room_price: number = 0;
   payment_method: string = '';
+  credit_card: CreditCard = new CreditCard();
 }
