@@ -11,7 +11,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 export class ListHotelTasksComponent implements OnInit {
  
   dataSource: MatTableDataSource<Task> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'name','description','status','accion1'];
+  displayedColumns: string[] = ['id', 'name','employer','description','status','accion1'];
   constructor(private Ts:TasksService) {
 
   }
