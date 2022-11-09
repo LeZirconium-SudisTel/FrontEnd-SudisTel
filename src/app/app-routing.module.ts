@@ -1,3 +1,4 @@
+import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
 import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
 import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
@@ -34,7 +35,12 @@ const routes: Routes = [
     { path: 'edicion/:id', component: HotelTasksCrearComponent },
   ]},
   {path: 'add-task', component: HotelTasksCrearComponent},
-  { path: 'rooms', component: RoomsComponent },
+  { path: 'rooms', component: RoomsComponent, children:[
+    { path: 'nuevo', component: RoomsCrearComponent },
+    { path: 'edicion/:id', component: RoomsCrearComponent },
+    { path: 'buscar/:id', component: RoomsBusquedaComponent }
+  ]},
+  { path: 'add-room', component: RoomsCrearComponent },
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
@@ -50,8 +56,6 @@ const routes: Routes = [
   {path: 'all-hotels', component: AllHotelsComponent, children:[
     { path: 'buscar/:id', component: AllHotelsBuscarComponent }
   ]},
-  { path: 'add-room', component: RoomsCrearComponent },
-
 ];
 
 @NgModule({

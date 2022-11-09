@@ -54,6 +54,8 @@ import { ReservationsTuristsComponent } from './pages/reservations-turists/reser
 import { MyHotelCrearComponent } from './pages/my-hotel/my-hotel-crear/my-hotel-crear.component';
 import { ReservationsTuristsAgregarComponent } from './pages/reservations-turists/reservations-turists-agregar/reservations-turists-agregar.component';
 import { ReservationsTuristsDialogoComponent } from './pages/reservations-turists/reservations-turists-dialogo/reservations-turists-dialogo.component';
+import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+
 
 @NgModule({
   declarations: [
@@ -86,6 +88,7 @@ import { ReservationsTuristsDialogoComponent } from './pages/reservations-turist
     MyHotelCrearComponent,
     ReservationsTuristsAgregarComponent,
     ReservationsTuristsDialogoComponent,
+    RoomsBusquedaComponent,
   ],
 
   imports: [

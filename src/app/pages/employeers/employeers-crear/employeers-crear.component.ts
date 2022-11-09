@@ -11,39 +11,39 @@ import { RoleService } from 'src/app/services/role.service';
   styleUrls: ['./employeers-crear.component.css']
 })
 export class EmployeersCrearComponent implements OnInit {
-  employer:Employer=new Employer();
+  employer: Employer = new Employer();
   listaRoles: Role[] = [];
   idRoleSeleccionado: number = 0;
-  mensaje: string="";
-  edicion:boolean=false;
-  id:number=0;
-  
-  constructor(private eS:EmployeesService, private rS:RoleService, private router:Router, private route:ActivatedRoute) { }
+  mensaje: string = "";
+  edicion: boolean = false;
+  id: number = 0;
+
+  constructor(private eS: EmployeesService, private rS: RoleService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.rS.listarRoles().subscribe((data) => {
       this.listaRoles = data;
     });
 
-    this.route.params.subscribe((data: Params)=>{
-      this.id=data['id'];
-      this.edicion=data['id']!=null;
+    this.route.params.subscribe((data: Params) => {
+      this.id = data['id'];
+      this.edicion = data['id'] != null;
       this.init();
     })
   }
   aceptar(): void {
-  
-    if (this.employer.first_nameEmployer.length > 0 && this.employer.last_nameEmployer.length > 0 && this.employer.emailEmployer.length>0 && this.employer.photoEmployer.length>0) {
+
+    if (this.employer.first_nameEmployer.length > 0 && this.employer.last_nameEmployer.length > 0 && this.employer.emailEmployer.length > 0 && this.employer.photoEmployer.length > 0) {
       let r = new Role();
       r.idRole = this.idRoleSeleccionado;
       this.employer.role = r;
-      if(this.edicion){
-        this.eS.modificar(this.employer).subscribe(data=>{
-          this.eS.listarEmpleados().subscribe(data=>{
+      if (this.edicion) {
+        this.eS.modificar(this.employer).subscribe(data => {
+          this.eS.listarEmpleados().subscribe(data => {
             this.eS.setLista(data);
           })
         })
-      }else{
+      } else {
         this.eS.insertar(this.employer).subscribe(data => {
           this.eS.listarEmpleados().subscribe(data => {
             this.eS.setLista(data);
@@ -55,10 +55,11 @@ export class EmployeersCrearComponent implements OnInit {
       this.mensaje = "Completa los datos requeridos";
     }
   }
-  init(){
+  init() {
     if (this.edicion) {
       this.eS.listarId(this.id).subscribe(data => {
         this.employer = data;
+        this.idRoleSeleccionado = data.role.idRole;
       })
     }
   }
