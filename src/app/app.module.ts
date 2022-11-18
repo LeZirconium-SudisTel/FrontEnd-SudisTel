@@ -61,6 +61,8 @@ import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/
 import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
 import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
+import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +102,8 @@ import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqu
     CreditCardDialogoComponent,
     HotelTasksBuscarComponent,
     RoomsBusquedaComponent,
+    EmployeersDominioComponent,
+    CantidadrolesComponent,
   ],
 
   imports: [

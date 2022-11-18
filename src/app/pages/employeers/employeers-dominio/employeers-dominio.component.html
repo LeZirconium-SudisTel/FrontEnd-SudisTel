@@ -1,4 +1,3 @@
-<app-employeers-buscar style="margin-left: 52px ;"></app-employeers-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>id</th>
@@ -40,27 +39,6 @@
     <td mat-cell *matCellDef="let element">{{ element.photoEmployer }}</td>
   </ng-container>
 
-  <ng-container matColumnDef="accion1">
-    <th mat-header-cell *matHeaderCellDef>Acciones</th>
-    <td mat-cell *matCellDef="let element">
-      <button
-        mat-raised-button
-        color="primary"
-        [routerLink]="['edicion', element?.idEmployer]"
-      >
-        Actualizar
-      </button>
-    </td>
-  </ng-container>
-  <ng-container matColumnDef="accion2">
-    <th mat-header-cell *matHeaderCellDef>Acciones</th>
-    <td mat-cell *matCellDef="let element">
-      <button mat-raised-button color="warn" (click)="confirmar(element.idEmployer)">
-        Eliminar
-      </button>
-    </td>
-  </ng-container>
-
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
@@ -69,28 +47,4 @@
   style="margin-left: 50px; margin-top: 20px"
   class="example-button-container"
 >
-  <button
-    mat-mini-fab
-    color="primary"
-    aria-label="Example icon button with a plus one icon"
-    [routerLink]="'/add-employer'"
-  >
-    <mat-icon>plus_one</mat-icon>
-  </button>
-  <button 
-  mat-mini-fab
-  color="accent"
-  aria-label="Example icon button with a plus one icon"
-  [routerLink]="'/employeers/dominio'"
-  >
-  <mat-icon>email</mat-icon>
-  </button>
-  <button 
-  mat-mini-fab
-  color="accent"
-  aria-label="Example icon button with a plus one icon"
-  [routerLink]="'/employeers/cantidadroles'"
-  >
-  <mat-icon>category</mat-icon>
-  </button>
 </div>
