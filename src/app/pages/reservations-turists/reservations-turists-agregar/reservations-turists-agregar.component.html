@@ -74,6 +74,18 @@
 
   <br />
 
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Seleccione uan Tarjeta de Credito</mat-label>
+    <mat-select [(value)]="idTarjetaSeleccionada" required>
+      <mat-option *ngFor="let c of listaTarjetas" [value]="c.idCreditCard">
+        {{ c.idCreditCard }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br />
+
   <button mat-raised-button color="primary" (click)="crear()">Aceptar</button>
   <button mat-raised-button color="accent" routerLink="/all-hotels">
     Cancelar

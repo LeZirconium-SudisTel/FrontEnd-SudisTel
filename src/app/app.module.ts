@@ -59,9 +59,15 @@ import { CreditCardListComponent } from './pages/credit-card/credit-card-list/cr
 import { ResourcesBuscarComponent } from './pages/resources/resources-buscar/resources-buscar.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
+<<<<<<< HEAD
 import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
 import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
 import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/resources-dialogoa/resources-dialogoa.component';
+=======
+import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
+import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+
+>>>>>>> 4e9992cd60a6905643e17565d39e2f1b5003373d
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,9 +104,14 @@ import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/re
     ResourcesBuscarComponent,
     CreditCardCrearComponent,
     CreditCardDialogoComponent,
+<<<<<<< HEAD
     ResourcesSinstockComponent,
     ResourcesCantidadtipoComponent,
     ResourcesDialogoaComponent,
+=======
+    HotelTasksBuscarComponent,
+    RoomsBusquedaComponent,
+>>>>>>> 4e9992cd60a6905643e17565d39e2f1b5003373d
   ],
 
   imports: [
