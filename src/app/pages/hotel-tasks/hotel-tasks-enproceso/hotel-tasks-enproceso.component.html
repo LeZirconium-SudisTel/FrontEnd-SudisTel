@@ -1,16 +1,6 @@
-<button style="margin-left: 50px"
-mat-icon-button
-[matMenuTriggerFor]="recmenu"
->
-<mat-icon>more_vert</mat-icon>
-</button>
-<mat-menu #recmenu="matMenu">
-<button mat-menu-item routerLink="/hotel-tasks/cantidadtarea">Ver cantidad de tareas por empleado</button>
-<button mat-menu-item routerLink="/hotel-tasks/enproceso">Ver tareas en proceso</button>
-</mat-menu>
- 
- 
- <app-hotel-tasks-buscar></app-hotel-tasks-buscar>
+
+
+
  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
      <th mat-header-cell *matHeaderCellDef> id </th>
@@ -39,20 +29,11 @@ mat-icon-button
      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
    </ng-container>
  
-   <ng-container matColumnDef="accion1">
-     <th mat-header-cell *matHeaderCellDef> Acciones </th>
-     <td mat-cell *matCellDef="let element"> <button mat-raised-button color="primary"
-         [routerLink]="['edicion', element?.id]">Actualizar</button>
-     </td>
-   </ng-container>
    
    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
  </table> 
- <div style="margin-left: 50px; margin-top: 20px;" class="example-button-container">
-   <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon" [routerLink]="'/add-task'">
-     <mat-icon>plus_one</mat-icon>
-   </button>
- </div>
- 
- 
+
+ <div style="margin-left: 50px; margin-top: 20px;">
+  <button mat-raised-button color="accent" routerLink="/hotel-tasks">Volver</button>
+  </div>

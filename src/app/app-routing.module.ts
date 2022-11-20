@@ -1,3 +1,5 @@
+import { HotelTasksEnprocesoComponent } from './pages/hotel-tasks/hotel-tasks-enproceso/hotel-tasks-enproceso.component';
+import { HotelTasksCantidadtareaComponent } from './pages/hotel-tasks/hotel-tasks-cantidadtarea/hotel-tasks-cantidadtarea.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardComponent } from './pages/credit-card/credit-card.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
@@ -35,6 +37,8 @@ const routes: Routes = [
   {path: 'hotel-tasks', component: HotelTasksComponent,children:[
     {path: 'nuevo', component: HotelTasksCrearComponent},
     { path: 'edicion/:id', component: HotelTasksCrearComponent },
+    { path: 'cantidadtarea', component: HotelTasksCantidadtareaComponent },
+    { path: 'enproceso', component: HotelTasksEnprocesoComponent },
   ]},
   {path: 'add-task', component: HotelTasksCrearComponent},
   { path: 'rooms', component: RoomsComponent, children:[
