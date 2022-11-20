@@ -1,4 +1,15 @@
-<app-resources-buscar style="margin-left: 52px ;"></app-resources-buscar>
+  <button style="margin-left: 50px"
+    mat-icon-button
+   [matMenuTriggerFor]="recmenu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #recmenu="matMenu">
+    <button mat-menu-item routerLink="/resources/sinstock">Ver productos sin stock</button>
+    <button mat-menu-item routerLink="/resources/cantidadtipo">Ver la cantidad por tipo</button>
+  </mat-menu>
+  
+<app-resources-buscar style="margin-left: 0px ;"></app-resources-buscar>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef>id</th>

@@ -1,3 +1,5 @@
+import { ResourcesDialogoaComponent } from './resources-dialogoa/resources-dialogoa.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Type } from './../../../models/Type';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
@@ -18,8 +20,9 @@ export class ResourcesCrearComponent implements OnInit {
   mensaje: string = "";
   edicion: boolean = false;
   id: number = 0;
+  private idMayor: number = 0;
 
-  constructor(private Rs: ResourceService, private Ts: TypeService,  private router: Router, private route: ActivatedRoute) { }
+  constructor(private Rs: ResourceService, private Ts: TypeService,  private router: Router, private route: ActivatedRoute, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.Ts.listarTypes().subscribe((data)=>{
@@ -66,5 +69,8 @@ export class ResourcesCrearComponent implements OnInit {
       this.idTypeSeleccionado = data.type.idType;
     })
   }
+}
+confirmar() {
+  this.dialog.open(ResourcesDialogoaComponent);
 }
 }

@@ -59,6 +59,9 @@ import { CreditCardListComponent } from './pages/credit-card/credit-card-list/cr
 import { ResourcesBuscarComponent } from './pages/resources/resources-buscar/resources-buscar.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
+import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
+import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
+import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/resources-dialogoa/resources-dialogoa.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +98,9 @@ import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list
     ResourcesBuscarComponent,
     CreditCardCrearComponent,
     CreditCardDialogoComponent,
+    ResourcesSinstockComponent,
+    ResourcesCantidadtipoComponent,
+    ResourcesDialogoaComponent,
   ],
 
   imports: [

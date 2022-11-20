@@ -1,4 +1,5 @@
 import { Resource } from './../models/Resource';
+import { RespuestaResource } from './../models/RespuestaResource';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject, EMPTY } from 'rxjs';
@@ -50,5 +51,11 @@ export class ResourceService {
       });
     }
     return EMPTY;
+  }
+  listaSinStock(){
+    return this.http.get<Resource[]>(`${this.url}/sinstock`)
+  }
+  listarCantidadTipo() {
+    return this.http.get<RespuestaResource[]>(`${this.url}/cantidadtipo`);
   }
 }
