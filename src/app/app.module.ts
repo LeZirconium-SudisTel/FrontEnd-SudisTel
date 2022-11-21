@@ -64,6 +64,8 @@ import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cant
 import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/resources-dialogoa/resources-dialogoa.component';
 import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+import { HotelTasksCantidadtareaComponent } from './pages/hotel-tasks/hotel-tasks-cantidadtarea/hotel-tasks-cantidadtarea.component';
+import { HotelTasksEnprocesoComponent } from './pages/hotel-tasks/hotel-tasks-enproceso/hotel-tasks-enproceso.component';
 import { HotelsPrecioComponent } from './pages/all-hotels/hotels-precio/hotels-precio.component';
 import { ReservationsCantidadTarjetasComponent } from './pages/reservations-turists/reservations-cantidad-tarjetas/reservations-cantidad-tarjetas.component';
 import { EmployeersDialogoaComponent } from './pages/employeers/employeers-crear/employeers-dialogoa/employeers-dialogoa.component';
@@ -113,6 +115,8 @@ import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.co
     ResourcesDialogoaComponent,
     HotelTasksBuscarComponent,
     RoomsBusquedaComponent,
+    HotelTasksCantidadtareaComponent,
+    HotelTasksEnprocesoComponent,
     HotelsPrecioComponent,
     ReservationsCantidadTarjetasComponent,
     EmployeersDialogoaComponent,
