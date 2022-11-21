@@ -26,6 +26,9 @@ import { PrincipalTuristComponent } from './pages/principal-turist/principal-tur
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
+import { RoomsCantidadHotelesComponent } from './pages/rooms/rooms-cantidad-hoteles/rooms-cantidad-hoteles.component';
+import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.component';
+
 
 const routes: Routes = [
 
@@ -44,7 +47,10 @@ const routes: Routes = [
   { path: 'rooms', component: RoomsComponent, children:[
     { path: 'nuevo', component: RoomsCrearComponent },
     { path: 'edicion/:id', component: RoomsCrearComponent },
-    { path: 'buscar/:id', component: RoomsBusquedaComponent }
+    { path: 'buscar/:id', component: RoomsBusquedaComponent },
+    { path: 'buscar_estado', component: RoomsCantidadHotelesComponent},
+    { path: 'buscar_cantidad', component: RoomsEstadoComponent}
+
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
   {path: 'add-employer', component:EmployeersCrearComponent},
@@ -68,7 +74,10 @@ const routes: Routes = [
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
   {path: 'credit-cards', component: CreditCardComponent, children:[
-    { path: 'add-credit-cards', component: CreditCardCrearComponent }
+    { path: 'add-credit-cards', component: CreditCardCrearComponent },
+  
+ 
+
   ]},
 
 ];

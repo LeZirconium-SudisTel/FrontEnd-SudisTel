@@ -67,6 +67,8 @@ import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqu
 import { EmployeersDialogoaComponent } from './pages/employeers/employeers-crear/employeers-dialogoa/employeers-dialogoa.component';
 import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
 import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
+import { RoomsCantidadHotelesComponent } from './pages/rooms/rooms-cantidad-hoteles/rooms-cantidad-hoteles.component';
+import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.component';
 
 @NgModule({
   declarations: [
@@ -112,6 +114,8 @@ import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantida
     EmployeersDialogoaComponent,
     EmployeersDominioComponent,
     CantidadrolesComponent,
+    RoomsCantidadHotelesComponent,
+    RoomsEstadoComponent,
   ],
 
   imports: [
@@ -142,4 +146,4 @@ import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantida
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
