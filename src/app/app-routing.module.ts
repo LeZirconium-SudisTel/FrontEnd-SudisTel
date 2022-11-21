@@ -1,3 +1,4 @@
+import { ReservationsCantidadTarjetasComponent } from './pages/reservations-turists/reservations-cantidad-tarjetas/reservations-cantidad-tarjetas.component';
 import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
 import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
 import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
@@ -25,19 +26,19 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
 import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
+import { HotelsPrecioComponent } from './pages/all-hotels/hotels-precio/hotels-precio.component';
 import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
 import { RoomsCantidadHotelesComponent } from './pages/rooms/rooms-cantidad-hoteles/rooms-cantidad-hoteles.component';
 import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.component';
 
-
 const routes: Routes = [
-
   {path: '', component: UserTypeComponent},
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
   {path: 'add-hotel', component: MyHotelCrearComponent},
   {path: 'reservations', component: ReservationsComponent},
   {path: 'reservations-turists', component: ReservationsTuristsComponent},
+  {path: 'cantidad-tarjetas', component: ReservationsCantidadTarjetasComponent},
   {path: 'reservar', component:ReservationsTuristsAgregarComponent},
   {path: 'hotel-tasks', component: HotelTasksComponent,children:[
     {path: 'nuevo', component: HotelTasksCrearComponent},
@@ -70,14 +71,12 @@ const routes: Routes = [
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'principal-turist', component: PrincipalTuristComponent},
   {path: 'all-hotels', component: AllHotelsComponent, children:[
-    { path: 'buscar/:id', component: AllHotelsBuscarComponent }
+    { path: 'buscar/:id', component: AllHotelsBuscarComponent },
+    {path: 'hotel_precio', component: HotelsPrecioComponent}
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
   {path: 'credit-cards', component: CreditCardComponent, children:[
     { path: 'add-credit-cards', component: CreditCardCrearComponent },
-  
- 
-
   ]},
 
 ];

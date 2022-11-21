@@ -41,4 +41,7 @@ export class HotelService {
     }
     return EMPTY;
   }
+  buscarMayorPrecio(){
+    return this.http.get<Hotel[]>(`${this.url}/buscar_mayor_precio`);
+  }
 }
