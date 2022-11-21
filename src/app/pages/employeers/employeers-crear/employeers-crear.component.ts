@@ -1,3 +1,5 @@
+import { MatDialog } from '@angular/material/dialog';
+import { EmployeersDialogoaComponent } from './employeers-dialogoa/employeers-dialogoa.component';
 import { EmployeesService } from './../../../services/employees.service';
 import { Employer } from './../../../models/Employer';
 import { Component, OnInit } from '@angular/core';
@@ -18,7 +20,7 @@ export class EmployeersCrearComponent implements OnInit {
   edicion: boolean = false;
   id: number = 0;
 
-  constructor(private eS: EmployeesService, private rS: RoleService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private eS: EmployeesService, private rS: RoleService, private router: Router, private route: ActivatedRoute, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.rS.listarRoles().subscribe((data) => {
@@ -62,5 +64,8 @@ export class EmployeersCrearComponent implements OnInit {
         this.idRoleSeleccionado = data.role.idRole;
       })
     }
+  }
+  confirmar() {
+    this.dialog.open(EmployeersDialogoaComponent);
   }
 }

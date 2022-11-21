@@ -1,4 +1,7 @@
 import { ReservationsCantidadTarjetasComponent } from './pages/reservations-turists/reservations-cantidad-tarjetas/reservations-cantidad-tarjetas.component';
+import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
+import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
+import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardComponent } from './pages/credit-card/credit-card.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
@@ -24,9 +27,11 @@ import { PrincipalTuristComponent } from './pages/principal-turist/principal-tur
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
 import { HotelsPrecioComponent } from './pages/all-hotels/hotels-precio/hotels-precio.component';
+import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
+import { RoomsCantidadHotelesComponent } from './pages/rooms/rooms-cantidad-hoteles/rooms-cantidad-hoteles.component';
+import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.component';
 
 const routes: Routes = [
-
   {path: '', component: UserTypeComponent},
   {path: 'principal-owner', component: PrincipalComponent},
   {path: 'my-hotel', component: MyHotelComponent},
@@ -43,18 +48,25 @@ const routes: Routes = [
   { path: 'rooms', component: RoomsComponent, children:[
     { path: 'nuevo', component: RoomsCrearComponent },
     { path: 'edicion/:id', component: RoomsCrearComponent },
-    { path: 'buscar/:id', component: RoomsBusquedaComponent }
+    { path: 'buscar/:id', component: RoomsBusquedaComponent },
+    { path: 'buscar_estado', component: RoomsCantidadHotelesComponent},
+    { path: 'buscar_cantidad', component: RoomsEstadoComponent}
+
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
     {path: 'edicion/:id', component: ResourcesCrearComponent},
+    {path: 'sinstock', component: ResourcesSinstockComponent},
+    {path: 'cantidadtipo', component: ResourcesCantidadtipoComponent}
   ]},
   {path: 'employeers', component: EmployeersComponent, children:[
     { path: 'nuevo', component: EmployeersCrearComponent },
     { path: 'edicion/:id', component: EmployeersCrearComponent },
-    { path: 'buscar/:id', component: EmployeersBuscarComponent }
+    { path: 'buscar/:id', component: EmployeersBuscarComponent },
+    { path: 'dominio', component: EmployeersDominioComponent },
+    { path:'cantidadroles',component: CantidadrolesComponent}
   ]},
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'principal-turist', component: PrincipalTuristComponent},
@@ -64,7 +76,7 @@ const routes: Routes = [
   ]},
   { path: 'add-room', component: RoomsCrearComponent },
   {path: 'credit-cards', component: CreditCardComponent, children:[
-    { path: 'add-credit-cards', component: CreditCardCrearComponent }
+    { path: 'add-credit-cards', component: CreditCardCrearComponent },
   ]},
 
 ];
