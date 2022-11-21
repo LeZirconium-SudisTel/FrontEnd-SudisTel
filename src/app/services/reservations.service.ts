@@ -2,6 +2,7 @@ import { Reservation } from 'src/app/models/Reservation';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { RespuestaReservacion } from '../models/RespuestaReservacion';
 @Injectable({
   providedIn: 'root',
 })
@@ -38,5 +39,8 @@ export class ReservationsService {
   }
   setConfirmaEliminacion(estado: Boolean) {
     this.confirmarEliminacion.next(estado);
+  }
+  listarCantidadTarjetas(){
+    return this.http.get<RespuestaReservacion[]>(`${this.url}/cantidad_tarjetas`)
   }
 }

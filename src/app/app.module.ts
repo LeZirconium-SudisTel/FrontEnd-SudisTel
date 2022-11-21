@@ -59,8 +59,20 @@ import { CreditCardListComponent } from './pages/credit-card/credit-card-list/cr
 import { ResourcesBuscarComponent } from './pages/resources/resources-buscar/resources-buscar.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardDialogoComponent } from './pages/credit-card/credit-card-list/credit-card-dialogo/credit-card-dialogo.component';
+import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
+import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
+import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/resources-dialogoa/resources-dialogoa.component';
 import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
+import { HotelTasksCantidadtareaComponent } from './pages/hotel-tasks/hotel-tasks-cantidadtarea/hotel-tasks-cantidadtarea.component';
+import { HotelTasksEnprocesoComponent } from './pages/hotel-tasks/hotel-tasks-enproceso/hotel-tasks-enproceso.component';
+import { HotelsPrecioComponent } from './pages/all-hotels/hotels-precio/hotels-precio.component';
+import { ReservationsCantidadTarjetasComponent } from './pages/reservations-turists/reservations-cantidad-tarjetas/reservations-cantidad-tarjetas.component';
+import { EmployeersDialogoaComponent } from './pages/employeers/employeers-crear/employeers-dialogoa/employeers-dialogoa.component';
+import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
+import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
+import { RoomsCantidadHotelesComponent } from './pages/rooms/rooms-cantidad-hoteles/rooms-cantidad-hoteles.component';
+import { RoomsEstadoComponent } from './pages/rooms/rooms-estado/rooms-estado.component';
 
 @NgModule({
   declarations: [
@@ -98,8 +110,20 @@ import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqu
     ResourcesBuscarComponent,
     CreditCardCrearComponent,
     CreditCardDialogoComponent,
+    ResourcesSinstockComponent,
+    ResourcesCantidadtipoComponent,
+    ResourcesDialogoaComponent,
     HotelTasksBuscarComponent,
     RoomsBusquedaComponent,
+    HotelTasksCantidadtareaComponent,
+    HotelTasksEnprocesoComponent,
+    HotelsPrecioComponent,
+    ReservationsCantidadTarjetasComponent,
+    EmployeersDialogoaComponent,
+    EmployeersDominioComponent,
+    CantidadrolesComponent,
+    RoomsCantidadHotelesComponent,
+    RoomsEstadoComponent,
   ],
 
   imports: [
@@ -130,4 +154,4 @@ import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqu
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

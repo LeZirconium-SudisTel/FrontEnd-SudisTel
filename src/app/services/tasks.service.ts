@@ -1,3 +1,4 @@
+import { RespuestaHotelTasks } from './../models/RespuestaHotelTasks';
 import { Task } from './../models/Task';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -42,6 +43,13 @@ buscar(texto: string) {
     });
   }
   return EMPTY;
+}
+listarCantidadTareas() {
+  return this.http.get<RespuestaHotelTasks[]>(`${this.url}/cantidadtarea`);
+}
+
+listarEnProceso(){
+  return this.http.get<Task[]>(`${this.url}/enproceso`);
 }
 
 }

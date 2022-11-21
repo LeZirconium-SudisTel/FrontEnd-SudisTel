@@ -1,3 +1,15 @@
+<button style="margin-left: 50px"
+mat-icon-button
+[matMenuTriggerFor]="recmenu"
+>
+<mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #recmenu="matMenu">
+<button mat-menu-item routerLink="/hotel-tasks/cantidadtarea">Ver cantidad de tareas por empleado</button>
+<button mat-menu-item routerLink="/hotel-tasks/enproceso">Ver tareas en proceso</button>
+</mat-menu>
+ 
+ 
  <app-hotel-tasks-buscar></app-hotel-tasks-buscar>
  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="id">

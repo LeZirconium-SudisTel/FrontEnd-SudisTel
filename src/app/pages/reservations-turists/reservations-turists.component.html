@@ -3,52 +3,66 @@
 <h1 style="padding-left: 10px">Mis reservas</h1>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>ID</th>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+  </ng-container>
 
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td mat-cell *matCellDef="let element">{{element.id}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="room_id">
-      <th mat-header-cell *matHeaderCellDef>Habitacion</th>
-      <td mat-cell *matCellDef="let element">{{element.room.numberRoom}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="check_in">
-      <th mat-header-cell *matHeaderCellDef>Check-In</th>
-      <td mat-cell *matCellDef="let element">{{element.check_in}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="check_out">
-      <th mat-header-cell *matHeaderCellDef>Check-Out</th>
-      <td mat-cell *matCellDef="let element">{{element.check_out}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="room_price">
-      <th mat-header-cell *matHeaderCellDef>Precio de habitacion</th>
-      <td mat-cell *matCellDef="let element">{{element.room_price}}</td>
-    </ng-container>
-  
-    <ng-container matColumnDef="status">
-      <th mat-header-cell *matHeaderCellDef>Estado</th>
-      <td mat-cell *matCellDef="let element">{{element.payment_method}}</td>
-    </ng-container>
+  <ng-container matColumnDef="room_id">
+    <th mat-header-cell *matHeaderCellDef>Habitacion</th>
+    <td mat-cell *matCellDef="let element">{{ element.room.numberRoom }}</td>
+  </ng-container>
 
-    <ng-container matColumnDef="credit_card">
-      <th mat-header-cell *matHeaderCellDef>Tarjeta</th>
-      <td mat-cell *matCellDef="let element">{{element.credit_card.idCreditCard}}</td>
-    </ng-container>
+  <ng-container matColumnDef="check_in">
+    <th mat-header-cell *matHeaderCellDef>Check-In</th>
+    <td mat-cell *matCellDef="let element">{{ element.check_in }}</td>
+  </ng-container>
 
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef>Acciones</th>
-      <td mat-cell *matCellDef="let element">
-        <button mat-raised-button color="warn" (click)="confirmar(element.id)">Cancelar</button>
-      </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+  <ng-container matColumnDef="check_out">
+    <th mat-header-cell *matHeaderCellDef>Check-Out</th>
+    <td mat-cell *matCellDef="let element">{{ element.check_out }}</td>
+  </ng-container>
 
- 
-  
+  <ng-container matColumnDef="room_price">
+    <th mat-header-cell *matHeaderCellDef>Precio de habitacion</th>
+    <td mat-cell *matCellDef="let element">{{ element.room_price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Estado</th>
+    <td mat-cell *matCellDef="let element">{{ element.payment_method }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="credit_card">
+    <th mat-header-cell *matHeaderCellDef>Tarjeta</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.credit_card.idCreditCard }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Acciones</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button color="warn" (click)="confirmar(element.id)">
+        Cancelar
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<div
+  style="margin-left: 50px; margin-top: 20px"
+  class="example-button-container"
+>
+  <button
+    mat-mini-fab
+    color="accent"
+    aria-label="Example icon button with a plus one icon"
+    [routerLink]="'/cantidad-tarjetas'"
+  >
+    <mat-icon>credit_card</mat-icon>
+  </button>
+</div>
