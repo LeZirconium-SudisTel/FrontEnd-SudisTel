@@ -65,6 +65,8 @@ import { ResourcesDialogoaComponent } from './pages/resources/resources-crear/re
 import { HotelTasksBuscarComponent } from './pages/hotel-tasks/hotel-tasks-buscar/hotel-tasks-buscar.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
 import { EmployeersDialogoaComponent } from './pages/employeers/employeers-crear/employeers-dialogoa/employeers-dialogoa.component';
+import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
+import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
 
 @NgModule({
   declarations: [
@@ -108,6 +110,8 @@ import { EmployeersDialogoaComponent } from './pages/employeers/employeers-crear
     HotelTasksBuscarComponent,
     RoomsBusquedaComponent,
     EmployeersDialogoaComponent,
+    EmployeersDominioComponent,
+    CantidadrolesComponent,
   ],
 
   imports: [

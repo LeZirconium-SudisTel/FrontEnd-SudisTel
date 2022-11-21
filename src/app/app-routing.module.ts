@@ -1,5 +1,6 @@
 import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
 import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
+import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardComponent } from './pages/credit-card/credit-card.component';
 import { RoomsBusquedaComponent } from './pages/rooms/rooms-busqueda/rooms-busqueda.component';
@@ -24,6 +25,7 @@ import { ResourcesCrearComponent } from './pages/resources/resources-crear/resou
 import { PrincipalTuristComponent } from './pages/principal-turist/principal-turist.component';
 import { ReservationsTuristsComponent } from './pages/reservations-turists/reservations-turists.component';
 import { RoomsCrearComponent } from './pages/rooms/rooms-crear/rooms-crear.component';
+import { CantidadrolesComponent } from './pages/employeers/cantidadroles/cantidadroles.component';
 
 const routes: Routes = [
 
@@ -55,7 +57,9 @@ const routes: Routes = [
   {path: 'employeers', component: EmployeersComponent, children:[
     { path: 'nuevo', component: EmployeersCrearComponent },
     { path: 'edicion/:id', component: EmployeersCrearComponent },
-    { path: 'buscar/:id', component: EmployeersBuscarComponent }
+    { path: 'buscar/:id', component: EmployeersBuscarComponent },
+    { path: 'dominio', component: EmployeersDominioComponent },
+    { path:'cantidadroles',component: CantidadrolesComponent}
   ]},
   {path: 'add-employer', component:EmployeersCrearComponent},
   {path: 'principal-turist', component: PrincipalTuristComponent},
