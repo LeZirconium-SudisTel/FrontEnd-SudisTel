@@ -19,6 +19,17 @@
   </mat-form-field>
 
   <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un Hotel</mat-label>
+    <mat-select [(value)]="idHotelSeleccionado" required>
+      <mat-option *ngFor="let h of listaHoteles" [value]="h.id">
+        {{ h.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
   <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
   <button mat-raised-button color="warn" [routerLink]="'/rooms'">Cancelar</button>
   <p>{{mensaje}}</p>

@@ -1,3 +1,4 @@
+import { RespuestaEmployer } from './../models/RespuestaEmployer';
 import { Employer } from './../models/Employer';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -45,5 +46,11 @@ export class EmployeesService {
       });
     }
     return EMPTY;
+  }
+  buscardominio() {
+    return this.http.get<Employer[]>(`${this.url}/buscardominio`);
+  }
+  listarCantidadRoles(){
+    return this.http.get<RespuestaEmployer[]>(`${this.url}/cantidadroles`);
   }
 }

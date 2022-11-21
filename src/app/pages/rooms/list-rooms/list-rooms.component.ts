@@ -9,16 +9,21 @@ import { RoomsService } from 'src/app/services/rooms.service';
   styleUrls: ['./list-rooms.component.css'],
 })
 export class ListRoomsComponent implements OnInit {
-  //is_available = false;
   dataSource: MatTableDataSource<Room> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'room_number', 'is_available', 'acciones'];
+  displayedColumns: string[] = [
+    'id',
+    'room_number',
+    'is_available',
+    'hotel',
+    'acciones',
+  ];
   constructor(private Rs: RoomsService) {}
 
   ngOnInit(): void {
     this.Rs.mostrarHabitaciones().subscribe((d) => {
       this.dataSource = new MatTableDataSource(d);
     });
-    this.Rs.getLista().subscribe(data => {
+    this.Rs.getLista().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
   }

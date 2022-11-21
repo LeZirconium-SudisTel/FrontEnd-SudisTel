@@ -1,3 +1,4 @@
+import { CountRooms } from './../models/CountRooms';
 import { Subject, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -36,4 +37,14 @@ export class RoomsService {
     }
     return EMPTY;
   }
+
+  buscarEstado() {
+    return this.http.get<Room[]>(`${this.url}/buscar_estado`);
+  }
+  
+  buscarCantidad() {
+
+    return this.http.get<CountRooms[]>(`${this.url}/cantidad_hotel`);
+  }
+
 }
