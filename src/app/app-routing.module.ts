@@ -1,3 +1,5 @@
+import { ResourcesCantidadtipoComponent } from './pages/resources/resources-cantidadtipo/resources-cantidadtipo.component';
+import { ResourcesSinstockComponent } from './pages/resources/resources-sinstock/resources-sinstock.component';
 import { EmployeersDominioComponent } from './pages/employeers/employeers-dominio/employeers-dominio.component';
 import { CreditCardCrearComponent } from './pages/credit-card/credit-card-crear/credit-card-crear.component';
 import { CreditCardComponent } from './pages/credit-card/credit-card.component';
@@ -49,6 +51,8 @@ const routes: Routes = [
   {path: 'resources', component: ResourcesComponent, children:[
     {path: 'add-resource', component: ResourcesCrearComponent},
     {path: 'edicion/:id', component: ResourcesCrearComponent},
+    {path: 'sinstock', component: ResourcesSinstockComponent},
+    {path: 'cantidadtipo', component: ResourcesCantidadtipoComponent}
   ]},
   {path: 'employeers', component: EmployeersComponent, children:[
     { path: 'nuevo', component: EmployeersCrearComponent },
