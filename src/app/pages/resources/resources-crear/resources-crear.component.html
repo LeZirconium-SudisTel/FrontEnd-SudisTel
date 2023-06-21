@@ -9,7 +9,7 @@
   
     <mat-form-field class="example-full-width">
       <mat-label>Nombre</mat-label>
-      <input matInput required placeholder="name" [(ngModel)]="resource.nameResource">
+      <input matInput required placeholder="name" [(ngModel)]="resource.nameResource" maxlength="25">
   
     </mat-form-field>
   
@@ -36,7 +36,7 @@
 
     <mat-form-field class="example-full-width">
       <mat-label>Estado</mat-label>
-      <input matInput required placeholder="status" [(ngModel)]="resource.status">
+      <input matInput required placeholder="status" [(ngModel)]="resource.status" maxlength="25">
     </mat-form-field>
   
     <br>
