@@ -44,14 +44,14 @@
   
   <mat-form-field class="example-full-width">
     <mat-label>Numero de telf.</mat-label>
-    <input type="number" matInput required placeholder="phone_number" [(ngModel)]="employer.phone_numberEmployer">
+    <input type="number" matInput required placeholder="phone_number" [(ngModel)]="employer.phone_numberEmployer" min="100000000" max="999999999">
   </mat-form-field>
 
   <br>
 
   <mat-form-field class="example-full-width">
     <mat-label>DNI</mat-label>
-    <input type="number" matInput required placeholder="DNI" [(ngModel)]="employer.dniEmployer">
+    <input type="number" matInput required placeholder="DNI" [(ngModel)]="employer.dniEmployer" min="10000000" max="99999999">
   </mat-form-field>
 
   <br>
